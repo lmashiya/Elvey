@@ -14,4 +14,9 @@ page-welcome {
     color: "elvey_blue";
     margin-top: 10px;
   }
+  .vertical-align-content > *{
+    justify-content: center;
+    display: flex!important;
+    align-items: center!important;
+   }
 }

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { AngularFireAuth} from '@angular/fire/auth';
 import { User } from '../../models/user';
+import firebase from '@firebase/app';
 /**
  * Generated class for the SignupPage page.
  *
@@ -18,6 +19,7 @@ import { User } from '../../models/user';
 export class SignupPage {
 
 user = {} as User;
+public firebaseAuth : FirebaseAuth;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private aFauth: AngularFireAuth) {
   }
@@ -27,15 +29,21 @@ user = {} as User;
   }
   async signup(user : User){
     try{
-      const result = await this.aFauth.auth.createUserWithEmailAndPassword(user.email, user.password);
-      if(result){
-        console.log("Signed up");
-        this.navCtrl.push(TabsPage);
+      const userObj = await this.aFauth.auth.createUserWithEmailAndPassword(user.email, user.password);
+      if(userObj){
+        if(firebase.auth().currentUser.sendEmailVerification()){
+          console.log("Hello i have a user");
+          this.navCtrl.push(TabsPage);
+        }
       }
     }
     catch(e){
       console.error(e);
     }
+  }
+
+  sendVerification(){
+
   }
 
 }

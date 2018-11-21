@@ -26,7 +26,7 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-  async login(user){
+  async login(user: User){
 
     try{
       const result = this.aFauth.auth.signInWithEmailAndPassword(user.email, user.password);
@@ -39,6 +39,10 @@ export class LoginPage {
     catch(e){
       console.error(e);
     }
+  }
+
+  checkEmail(user){
+
   }
 
 }

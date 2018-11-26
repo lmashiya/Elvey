@@ -5,6 +5,7 @@ import { AngularFireAuth} from '@angular/fire/auth';
 import { User } from '../../models/user';
 //import firebase from 'firebase/*';
 import * as firebase from 'firebase/app';
+import {LoginPage} from '../login/login';
 /**
  * Generated class for the SignupPage page.
  *
@@ -32,8 +33,10 @@ user = {} as User;
       const userObj = await this.aFauth.auth.createUserWithEmailAndPassword(user.email, user.password);
       if(userObj){
         if(this.sendVerification()){
-          console.log("Hello i have a user");
-          this.navCtrl.push(TabsPage);
+          this.navCtrl.push(LoginPage);
+          if(this.isVerified()){
+            console.log("have to redirect")
+          }
         }
       }
     }
@@ -44,6 +47,11 @@ user = {} as User;
 
   sendVerification(){
     return firebase.auth().currentUser.sendEmailVerification();
+  }
+
+  isVerified(){
+    console.log("is verified")
+    return firebase.auth().currentUser.emailVerified;
   }
 
 }

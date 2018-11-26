@@ -26,6 +26,10 @@
     "@ionic-native/status-bar": "~4.17.0",
     "@ionic/storage": "2.2.0",
     "cordova": "^8.1.2",
+    "cordova-plugin-browsertab": "0.2.0",
+    "cordova-plugin-buildinfo": "2.0.2",
+    "cordova-plugin-inappbrowser": "3.0.0",
+    "cordova-universal-links-plugin-fix": "1.2.1",
     "firebase": "^5.5.9",
     "g": "^2.0.1",
     "ionic": "^4.3.1",
@@ -40,5 +44,13 @@
     "@ionic/app-scripts": "3.2.0",
     "typescript": "~3.1.6"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-buildinfo": {},
+      "cordova-universal-links-plugin": {},
+      "cordova-plugin-browsertab": {},
+      "cordova-plugin-inappbrowser": {}
+    }
+  }
 }

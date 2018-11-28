@@ -44,7 +44,7 @@ user = {} as User;
       }
     }
     catch(e){
-      console.error(e);
+      alert(e.message);
     }
   }
 

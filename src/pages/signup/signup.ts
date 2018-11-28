@@ -30,6 +30,9 @@ user = {} as User;
   }
   async signup(user : User){
     try{
+      if(user.password.length < 6){
+        alert("password has to be at least 6 characters");
+      }
       const userObj = await this.aFauth.auth.createUserWithEmailAndPassword(user.email, user.password);
       if(userObj){
         if(this.sendVerification()){

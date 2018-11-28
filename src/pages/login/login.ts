@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from '../../models/user';
 import { AngularFireAuth} from '@angular/fire/auth';
 import {TabsPage} from '../tabs/tabs';
-
+import * as firebase from 'firebase/app';
 /**
  * Generated class for the LoginPage page.
  *
@@ -29,8 +29,8 @@ export class LoginPage {
   async login(user: User){
 
     try{
-      const result = this.aFauth.auth.signInWithEmailAndPassword(user.email, user.password);
-      console.log(result);
+        const result = this.aFauth.auth.signInWithEmailAndPassword(user.email, user.password);
+        console.log("This is the result " + result);
 
       if(result){
         this.navCtrl.push(TabsPage);
@@ -39,10 +39,6 @@ export class LoginPage {
     catch(e){
       console.error(e);
     }
-  }
-
-  checkEmail(user){
-
   }
 
 }

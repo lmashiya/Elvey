@@ -31,10 +31,14 @@ export class LoginPage {
     try{
         const result = this.aFauth.auth.signInWithEmailAndPassword(user.email, user.password);
         console.log("This is the result " + result);
-
-      if(result){
+        console.log(firebase.auth().currentUser.emailVerified);
+        if(firebase.auth().currentUser.emailVerified){
         this.navCtrl.push(TabsPage);
-      }
+        }
+        else{
+        console.log("Not verified");
+        alert (" Your account is not activate, An activation link has been sent to your registered email");
+        }
     }
     catch(e){
       console.error(e);

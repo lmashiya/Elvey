@@ -555,6 +555,8 @@ var MyApp = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase_app__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase_app__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -603,6 +605,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -626,8 +629,13 @@ var LoginPage = /** @class */ (function () {
                 try {
                     result = this.aFauth.auth.signInWithEmailAndPassword(user.email, user.password);
                     console.log("This is the result " + result);
-                    if (result) {
+                    console.log(__WEBPACK_IMPORTED_MODULE_4_firebase_app__["auth"]().currentUser.emailVerified);
+                    if (__WEBPACK_IMPORTED_MODULE_4_firebase_app__["auth"]().currentUser.emailVerified) {
                         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__tabs_tabs__["a" /* TabsPage */]);
+                    }
+                    else {
+                        console.log("Not verified");
+                        alert(" Your account is not activate, An activation link has been sent to your registered email");
                     }
                 }
                 catch (e) {

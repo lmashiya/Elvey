@@ -29574,6 +29574,17 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-home .button-bottom {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+}
+
+page-home .after_logo {
+  background: #00599c;
+  color: white;
+}
+
 page-login .loginButton {
   margin-top: 20px;
 }

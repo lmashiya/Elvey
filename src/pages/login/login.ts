@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { User } from '../../models/user';
 import { AngularFireAuth} from '@angular/fire/auth';
 import {TabsPage} from '../tabs/tabs';
@@ -20,9 +20,19 @@ export class LoginPage {
 
   user = {} as User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams ,private aFauth: AngularFireAuth) {
+  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams ,private aFauth: AngularFireAuth) {
+
   }
 
+  alert(message: string)
+   {
+     this.alertCtrl.create({
+         title: 'Info!',
+         subTitle: message,
+         buttons: ['OK']
+     }).present();
+
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
@@ -35,14 +45,11 @@ export class LoginPage {
         if(firebase.auth().currentUser.emailVerified){
         this.navCtrl.push(TabsPage);
         }
-        else{
-        console.log("Not verified");
-        alert (" Your account is not activate, An activation link has been sent to your registered email");
-        }
     }
     catch(e){
-      console.error(e);
+      this.alert(e.message);
     }
   }
+
 
 }

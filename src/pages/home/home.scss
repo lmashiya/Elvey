@@ -1,3 +1,12 @@
 page-home {
+  .button-bottom{
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  }
 
+  .after_logo{
+    background: color($colors,elvey_blue);
+    color: white;
+  }
 }

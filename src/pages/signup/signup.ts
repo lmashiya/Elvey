@@ -20,6 +20,7 @@ import {LoginPage} from '../login/login';
 })
 export class SignupPage {
 
+error: any;
 user = {} as User;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private aFauth: AngularFireAuth) {
@@ -43,8 +44,9 @@ user = {} as User;
         }
       }
     }
-    catch(e){
-      alert(e.message);
+    catch(err){
+      this.error = err;
+      this.alert(err);
     }
   }
 

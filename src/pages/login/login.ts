@@ -5,6 +5,7 @@ import { AngularFireAuth} from '@angular/fire/auth';
 import {TabsPage} from '../tabs/tabs';
 import {SignupPage} from "../signup/signup";
 import * as firebase from 'firebase/app';
+import {HomePage} from "../home/home";
 /**
  * Generated class for the LoginPage page.
  *
@@ -63,6 +64,51 @@ export class LoginPage {
     {
         this.navCtrl.setRoot(SignupPage);
     }
+    provider = {
+        loggedin: false,
+        email: '',
+        name: '',
+        profilePicture: ''
 
+    }
+
+    loginWithFacebook()
+    {
+        this.fire.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
+            .then( res => {
+                this.provider.loggedin = true;
+                this.provider.email = res.user.email;
+                this.provider.name = res.user.displayName;
+                this.provider.profilePicture = res.user.photoURL;
+                console.log(res);
+                //this.navCtrl.push(HomePage);
+            })
+    }
+
+    loginWithGmail()
+    {
+        this.fire.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+            .then( res => {
+                this.provider.loggedin = true;
+                this.provider.email = res.user.email;
+                this.provider.name = res.user.displayName;
+                this.provider.profilePicture = res.user.photoURL;
+                console.log(res);
+                //this.navCtrl.push(HomePage);
+            })
+    }
+    loginWithTwitter()
+    {
+        this.fire.auth.signInWithPopup(new firebase.auth.TwitterAuthProvider())
+            .then( res => {
+                this.provider.loggedin = true;
+                this.provider.email = res.user.email;
+                this.provider.name = res.user.displayName;
+                this.provider.profilePicture = res.user.photoURL;
+                console.log(res);
+                //this.navCtrl.push(HomePage);
+            })
+
+    }
 
 }

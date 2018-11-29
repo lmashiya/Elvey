@@ -20,36 +20,45 @@ export class LoginPage {
 
   user = {} as User;
 
-  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams ,private aFauth: AngularFireAuth) {
+  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams ,private fire: AngularFireAuth) {
 
   }
 
   alert(message: string)
-   {
-     this.alertCtrl.create({
-         title: 'Info!',
-         subTitle: message,
-         buttons: ['OK']
-     }).present();
-
-  }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
-  async login(user: User){
-
-    try{
-        const result = this.aFauth.auth.signInWithEmailAndPassword(user.email, user.password);
-        console.log("This is the result " + result);
-        console.log(firebase.auth().currentUser.emailVerified);
-        if(firebase.auth().currentUser.emailVerified){
-        this.navCtrl.push(TabsPage);
-        }
+  {
+      this.alertCtrl.create(
+          {title: 'Info!',
+            subTitle: message,
+            buttons: ['OK']
+        }).present();
     }
-    catch(e){
-      this.alert(e.message);
+    login(){
+
+        this.fire.auth.signInWithEmailAndPassword(this.user.email, this.user.password)
+            .then( data =>
+                {
+                    console.log('Got data', this.fire.auth.currentUser);
+                    console.log(firebase.auth().currentUser.emailVerified);
+                    if(firebase.auth().currentUser.emailVerified == false){
+                        this.alert('Verify email first!');
+                    }
+                    else
+                    {
+                        this.alert('You have been logged in!');
+                        this.navCtrl.setRoot(TabsPage);
+                    }
+                    //this.alert('Success You\'re logged in!');
+
+                    //logged in
+                }
+            )
+            .catch( error =>
+            {
+                console.log('Got an error', error);
+                this.alert('Invalid Email/Password!');
+                //error
+            })
     }
-  }
 
 
 }

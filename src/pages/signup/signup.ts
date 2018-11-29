@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { AngularFireAuth} from '@angular/fire/auth';
 import { User } from '../../models/user';
@@ -23,12 +23,20 @@ export class SignupPage {
 error: any;
 user = {} as User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private aFauth: AngularFireAuth) {
+  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, private aFauth: AngularFireAuth) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
   }
+    alert(message: string)
+    {
+        this.alertCtrl.create({
+            title: 'Info!',
+            subTitle: message,
+            buttons: ['OK']
+        }).present();
+    }
   async signup(user : User){
     try{
       if(user.password.length < 6){

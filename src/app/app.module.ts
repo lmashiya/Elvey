@@ -6,7 +6,6 @@ import firebase from '@firebase/app';
 //import {FIREBASE_CONFIG} from './app.firebase.config';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireModule} from '@angular/fire';
-import {WelcomePage} from '../pages/welcome/welcome';
 import {LoginPage} from '../pages/login/login';
 import {SignupPage} from '../pages/signup/signup';
 import { AboutPage } from '../pages/about/about';
@@ -30,7 +29,6 @@ const FIREBASE_CONFIG = {
   declarations: [
     MyApp,
     AboutPage,
-    WelcomePage,
     LoginPage,
     SignupPage,
     ContactPage,
@@ -47,7 +45,6 @@ const FIREBASE_CONFIG = {
   entryComponents: [
     MyApp,
     AboutPage,
-    WelcomePage,
     LoginPage,
     SignupPage,
     ContactPage,

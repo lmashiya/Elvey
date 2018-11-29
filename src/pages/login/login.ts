@@ -36,29 +36,31 @@ export class LoginPage {
     }
     login(){
 
-        this.fire.auth.signInWithEmailAndPassword(this.user.email, this.user.password)
-            .then( data =>
-                {
-                    console.log('Got data', this.fire.auth.currentUser);
-                    console.log(firebase.auth().currentUser.emailVerified);
-                    if(firebase.auth().currentUser.emailVerified == false){
-                        this.alert('Verify email first!');
-                    }
-                    else
-                    {
-                        this.alert('You have been logged in!');
-                        this.navCtrl.setRoot(TabsPage);
-                    }
-
-                    //logged in
-                }
-            )
-            .catch( error =>
-            {
-                console.log('Got an error', error);
-                this.alert('Invalid Email/Password!');
-                //error
-            })
+      if (this.user.email == null || this.user.password == null)
+      {
+          this.alert('Empty Email/Password!');
+      }
+      else {
+          this.fire.auth.signInWithEmailAndPassword(this.user.email, this.user.password)
+              .then(data => {
+                      console.log('Got data', this.fire.auth.currentUser);
+                      console.log(firebase.auth().currentUser.emailVerified);
+                      if (firebase.auth().currentUser.emailVerified == false) {
+                          this.alert('Verify email first!');
+                      }
+                      else {
+                          this.alert('You have been logged in!');
+                          this.navCtrl.setRoot(TabsPage);
+                      }
+                      //logged in
+                  }
+              )
+              .catch(error => {
+                  console.log('Got an error', error);
+                  this.alert('Invalid Email/Password!');
+                  //error
+              })
+      }
     }
     signupPush()
     {
@@ -81,7 +83,7 @@ export class LoginPage {
                 this.provider.name = res.user.displayName;
                 this.provider.profilePicture = res.user.photoURL;
                 console.log(res);
-                //this.navCtrl.push(HomePage);
+                this.navCtrl.push(HomePage);
             })
     }
 
@@ -94,7 +96,7 @@ export class LoginPage {
                 this.provider.name = res.user.displayName;
                 this.provider.profilePicture = res.user.photoURL;
                 console.log(res);
-                //this.navCtrl.push(HomePage);
+                this.navCtrl.push(HomePage);
             })
     }
     loginWithTwitter()
@@ -106,7 +108,7 @@ export class LoginPage {
                 this.provider.name = res.user.displayName;
                 this.provider.profilePicture = res.user.photoURL;
                 console.log(res);
-                //this.navCtrl.push(HomePage);
+                this.navCtrl.push(HomePage);
             })
 
     }

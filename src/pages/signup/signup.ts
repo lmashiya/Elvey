@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {AlertController, IonicPage, NavController, NavParams, Navbar} from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { AngularFireAuth} from '@angular/fire/auth';
 import { User } from '../../models/user';
@@ -23,14 +23,16 @@ export class SignupPage {
 error: any;
 user = {} as User;
 
+    @ViewChild(Navbar) navBar: Navbar;
   constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, private aFauth: AngularFireAuth) {
   }
 
-    goback() {
-        this.navCtrl.pop();
-        console.log('Click on button Test Console Log');
-    }
+
   ionViewDidLoad() {
+      this.navBar.backButtonClick = (e:UIEvent)=>{
+          // todo something
+          this.navCtrl.pop();
+      }
     console.log('ionViewDidLoad SignupPage');
   }
     alert(message: string)
@@ -70,5 +72,4 @@ user = {} as User;
     console.log("is verified")
     return firebase.auth().currentUser.emailVerified;
   }
-
 }

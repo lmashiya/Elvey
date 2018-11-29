@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { User } from '../../models/user';
 import { AngularFireAuth} from '@angular/fire/auth';
 import {TabsPage} from '../tabs/tabs';
+import {SignupPage} from "../signup/signup";
 import * as firebase from 'firebase/app';
 /**
  * Generated class for the LoginPage page.
@@ -47,7 +48,6 @@ export class LoginPage {
                         this.alert('You have been logged in!');
                         this.navCtrl.setRoot(TabsPage);
                     }
-                    //this.alert('Success You\'re logged in!');
 
                     //logged in
                 }
@@ -58,6 +58,10 @@ export class LoginPage {
                 this.alert('Invalid Email/Password!');
                 //error
             })
+    }
+    signupPush()
+    {
+        this.navCtrl.setRoot(SignupPage);
     }
 
 

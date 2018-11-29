@@ -7,7 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title text-center>Welcome</ion-title>
+    <ion-buttons end>
+
+      <button ion-button icon-only (click)="signupPush()">
+        <p>Not A Member?</p>
+        <button default ion-button end round outline class="button2" (click) = "signupPush()" >Signup</button>
+      </button>
+
+    </ion-buttons>
+
   </ion-navbar>
 
 </ion-header>
@@ -17,12 +26,12 @@
   <img src="assets/imgs/elvey-extra-txt.png">
   <ion-list>
     <ion-item>
-      <ion-label floating>Email</ion-label>
+      <ion-label floating text-center>Email</ion-label>
       <ion-input type="text" [(ngModel)] = "user.email" ></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Password</ion-label>
+      <ion-label floating text-center>Password</ion-label>
       <ion-input type="password" [(ngModel)] = "user.password" ></ion-input>
     </ion-item>
     <div class="loginButton">

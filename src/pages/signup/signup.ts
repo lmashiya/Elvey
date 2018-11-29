@@ -26,6 +26,10 @@ user = {} as User;
   constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, private aFauth: AngularFireAuth) {
   }
 
+    goback() {
+        this.navCtrl.pop();
+        console.log('Click on button Test Console Log');
+    }
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
   }

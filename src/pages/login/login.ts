@@ -62,6 +62,16 @@ export class LoginPage {
               })
       }
     }
+    resetpass()
+    {
+        this.fire.auth.sendPasswordResetEmail(this.user.email)
+            .then(data => {
+                this.alert('Reset password email sent!');
+            })
+            .catch(error => {
+                this.alert('Invalid Email!');
+            })
+    }
     signupPush()
     {
         this.navCtrl.setRoot(SignupPage);

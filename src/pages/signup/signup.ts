@@ -6,6 +6,7 @@ import { User } from '../../models/user';
 //import firebase from 'firebase/*';
 import * as firebase from 'firebase/app';
 import {LoginPage} from '../login/login';
+
 /**
  * Generated class for the SignupPage page.
  *
@@ -72,4 +73,9 @@ user = {} as User;
     console.log("is verified")
     return firebase.auth().currentUser.emailVerified;
   }
+  BackButton()
+  {
+      this.navCtrl.push(LoginPage); 
+  }
+  
 }

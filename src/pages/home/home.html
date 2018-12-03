@@ -9,6 +9,17 @@
   <div id="welcome_text" class="after_logo">WELCOME</div>
   <img src="assets/imgs/placeholder.png">
   <div class="button-bottom">
+      <!-- <ion-card *ngIf="provider.loggedin">
+          <img height="400" src="{{ provider.profilePicture }}"/>
+        <ion-card-content>
+          <ion-card-title>
+            {{ provider.name}}
+          </ion-card-title>
+          <p style="text-align: center">
+            {{ provider.email }}
+          </p>
+          </ion-card-content>
+        </ion-card> -->
     <button ion-button small round outline (click) = "logout()">LogOut</button>
   </div>
 

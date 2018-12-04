@@ -7,7 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title text-center></ion-title>
+    <ion-buttons end>
+
+      <button ion-button icon-only (click)="signupPush()">
+        <p>Not A Member?</p>
+        <button default ion-button end round outline class="button2" (click) = "signupPush()" >Singup</button>
+      </button>
+
+    </ion-buttons>
+
   </ion-navbar>
 
 </ion-header>
@@ -17,18 +26,36 @@
   <img src="assets/imgs/elvey-extra-txt.png">
   <ion-list>
     <ion-item>
-      <ion-label floating>Email</ion-label>
+      <ion-label floating text-center>Email</ion-label>
       <ion-input type="text" [(ngModel)] = "user.email" ></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Password</ion-label>
+      <ion-label floating text-center>Password</ion-label>
       <ion-input type="password" [(ngModel)] = "user.password" ></ion-input>
     </ion-item>
     <div class="loginButton">
       <button ion-button round outline (click) = "login(user)">Login</button>
+      <button ion-button round outline (click) = "resetpass(user)">Reset Password</button>
     </div>
-
-
+    <div class="googlebutton">
+      <button ion-button round (click) = "loginWithGmail()">
+        <img src="assets/imgs/gbtn.png">Continue with Google</button>
+      <button ion-button round (click) = "loginWithFacebook()">
+        <img src="assets/imgs/fb2.png">Continue with Facebook</button>
+      <button ion-button round outline (click) = "loginWithTwitter()">
+        <img src="assets/imgs/twt.png" >continue with Twitter</button>
+        <ion-card *ngIf="provider.loggedin">
+          <img src="{{ provider.profilePicture }}"/>
+        <ion-card-content>
+          <ion-card-title>
+            {{ provider.name}}
+          </ion-card-title>
+          <p style="text-align: center">
+            {{ provider.email }}
+          </p>
+          </ion-card-content>
+        </ion-card>
+  </div>
   </ion-list>
 </ion-content>

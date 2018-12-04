@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {AlertController, IonicPage, NavController, NavParams, Navbar} from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { AngularFireAuth} from '@angular/fire/auth';
 import { User } from '../../models/user';
 //import firebase from 'firebase/*';
 import * as firebase from 'firebase/app';
 import {LoginPage} from '../login/login';
+
 /**
  * Generated class for the SignupPage page.
  *
@@ -23,12 +24,26 @@ export class SignupPage {
 error: any;
 user = {} as User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private aFauth: AngularFireAuth) {
+    @ViewChild(Navbar) navBar: Navbar;
+  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, private aFauth: AngularFireAuth) {
   }
 
+
   ionViewDidLoad() {
+      this.navBar.backButtonClick = (e:UIEvent)=>{
+          // todo something
+          this.navCtrl.pop();
+      }
     console.log('ionViewDidLoad SignupPage');
   }
+    alert(message: string)
+    {
+        this.alertCtrl.create({
+            title: 'Info!',
+            subTitle: message,
+            buttons: ['OK']
+        }).present();
+    }
   async signup(user : User){
     try{
       if(user.password.length < 6){
@@ -58,5 +73,9 @@ user = {} as User;
     console.log("is verified")
     return firebase.auth().currentUser.emailVerified;
   }
-
+  BackButton()
+  {
+      this.navCtrl.push(LoginPage); 
+  }
+  
 }

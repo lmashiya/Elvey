@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController,App } from 'ionic-angular';
 import {WelcomePage} from '../welcome/welcome';
+import {DevicesPage} from '../devices/devices';
 
 @Component({
   selector: 'page-home',
@@ -14,5 +15,9 @@ export class HomePage {
   logout(){
     const root = this.app.getRootNav();
     root.popToRoot();
+  }
+
+  add_device(){
+    this.navCtrl.push(DevicesPage);
   }
 }

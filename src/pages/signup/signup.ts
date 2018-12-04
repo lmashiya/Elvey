@@ -46,7 +46,7 @@ user = {} as User;
     }
     catch(err){
       this.error = err;
-      this.alert(err);
+      //this.alert(err);
     }
   }
 

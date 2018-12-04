@@ -29574,6 +29574,26 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-devices .button-bottom {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+}
+
+page-devices .after_logo {
+  background: #00599c;
+  color: white;
+}
+
+page-devices .add_button {
+  bottom: 30%;
+  width: 100%;
+}
+
+page-devices .texter {
+  color: #00599c;
+}
+
 page-home .button-bottom {
   position: absolute;
   bottom: 5%;
@@ -29583,6 +29603,11 @@ page-home .button-bottom {
 page-home .after_logo {
   background: #00599c;
   color: white;
+}
+
+page-home .add_button {
+  bottom: 30%;
+  width: 100%;
 }
 
 page-login .loginButton {

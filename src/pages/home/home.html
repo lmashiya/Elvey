@@ -1,6 +1,7 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title text-center>Home</ion-title>
+     <ion-icon name="menu"></ion-icon>
   </ion-navbar>
 </ion-header>
 
@@ -8,6 +9,10 @@
   <img src="assets/imgs/elvey-extra-txt.png">
   <div id="welcome_text" class="after_logo">WELCOME</div>
   <img src="assets/imgs/placeholder.png">
+
+  <div class="add_button">
+    <button ion-button block outline large (click) = "add_device()" >Add Device</button>
+  </div>
   <div class="button-bottom">
     <button ion-button small round outline (click) = "logout()">LogOut</button>
   </div>

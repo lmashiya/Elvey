@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {CameraPage} from '../camera/camera';
+import {IntrusionPage} from '../intrusion/intrusion';
+import {FirePage} from '../fire/fire';
+import {AccessPage} from '../access/access';
+
 
 /**
  * Generated class for the DevicesPage page.
@@ -15,19 +20,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DevicesPage {
 
-  devices: any;
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.devices = [
-      {name: "CCTV/Surveillence", code: 1},
-      {name: "Intrusion Detection", code: 2},
-      {name: "Fire Detection", code: 3},
-      {name: "Access Control", code: 4},
-    ];
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DevicesPage');
   }
 
+  goToCamera(){
+    this.navCtrl.push(CameraPage);
+    }
+  goToAccess(){
+    this.navCtrl.push(AccessPage);
+  }
+  goToDetection(){
+    this.navCtrl.push(IntrusionPage);
+  }
+  goToFire(){
+    this.navCtrl.push(FirePage);
+  }
 }

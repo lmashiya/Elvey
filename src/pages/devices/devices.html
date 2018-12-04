@@ -17,9 +17,21 @@
   <br>
 
   <ion-list no-lines text-center>
-    <ion-item class = "texter" *ngFor = "let device of devices">
-      {{device.name}}
-      <button ion-button outline item-end>Add Device</button>
+    <ion-item class = "texter">
+      CSS/Surveillence
+      <button ion-button outline item-end (click) = "goToCamera()">Add Device</button>
+    </ion-item>
+    <ion-item class = "texter">
+      Fire Detection
+      <button ion-button outline item-end (click) = "goToFire()">Add Device</button>
+    </ion-item>
+    <ion-item class = "texter">
+      Access Control
+      <button ion-button outline item-end (click) = "goToAccess()">Add Device</button>
+    </ion-item>
+    <ion-item class = "texter">
+      Intrusion Detection
+      <button ion-button outline item-end (click) = "goToDetection()">Add Device</button>
     </ion-item>
   </ion-list>
 

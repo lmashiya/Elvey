@@ -12,6 +12,10 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import {DevicesPage} from '../pages/devices/devices';
+import {CameraPage} from '../pages/camera/camera';
+import {FirePage} from '../pages/fire/fire';
+import {AccessPage} from '../pages/access/access';
+import {IntrusionPage} from '../pages/intrusion/intrusion';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -34,7 +38,11 @@ const FIREBASE_CONFIG = {
     ContactPage,
     HomePage,
     TabsPage,
-    DevicesPage
+    DevicesPage,
+    IntrusionPage,
+    CameraPage,
+    AccessPage,
+    FirePage,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +59,11 @@ const FIREBASE_CONFIG = {
     ContactPage,
     HomePage,
     TabsPage,
-    DevicesPage
+    DevicesPage,
+    IntrusionPage,
+    CameraPage,
+    AccessPage,
+    FirePage,
   ],
   providers: [
     StatusBar,

@@ -23,6 +23,8 @@ export class SignupPage {
 
 error: any;
 user = {} as User;
+    passwordType: string = 'password';
+    passwordShown: boolean = false;
 
     @ViewChild(Navbar) navBar: Navbar;
   constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, private aFauth: AngularFireAuth) {
@@ -51,6 +53,7 @@ user = {} as User;
       }
       const userObj = await this.aFauth.auth.createUserWithEmailAndPassword(user.email, user.password);
       if(userObj){
+          this.alert('You have successfully signed up!');
         if(this.sendVerification()){
           this.navCtrl.push(LoginPage);
           if(this.isVerified()){
@@ -65,6 +68,19 @@ user = {} as User;
     }
   }
 
+    togglePassword()
+    {
+        if(this.passwordShown)
+        {
+            this.passwordShown = false;
+            this.passwordType = 'password';
+        }
+        else
+        {
+            this.passwordShown = true;
+            this.passwordType = 'text';
+        }
+    }
   sendVerification(){
     return firebase.auth().currentUser.sendEmailVerification();
   }

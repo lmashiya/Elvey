@@ -11,6 +11,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import {ResetpasswordPage} from "../pages/resetpassword/resetpassword";
 import {DevicesPage} from '../pages/devices/devices';
 import {CameraPage} from '../pages/camera/camera';
 import {FirePage} from '../pages/fire/fire';
@@ -21,12 +22,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 const FIREBASE_CONFIG = {
-    apiKey: "AIzaSyBgB8GwKV_KG87G6FxmuhhYsJWiSMCB_6U",
-    authDomain: "fir-auth-3c10d.firebaseapp.com",
-    databaseURL: "https://fir-auth-3c10d.firebaseio.com",
-    projectId: "fir-auth-3c10d",
-    storageBucket: "fir-auth-3c10d.appspot.com",
-    messagingSenderId: "523649393350"
+    apiKey: "AIzaSyBh-bIhgu56St2nBNBqv8ULJ2Ci246VXn0",
+    authDomain: "elveyapp.firebaseapp.com",
+    databaseURL: "https://elveyapp.firebaseio.com",
+    projectId: "elveyapp",
+    storageBucket: "elveyapp.appspot.com",
+    messagingSenderId: "611172371578"
   };
 
 @NgModule({
@@ -43,6 +44,7 @@ const FIREBASE_CONFIG = {
     CameraPage,
     AccessPage,
     FirePage,
+      ResetpasswordPage,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +66,7 @@ const FIREBASE_CONFIG = {
     CameraPage,
     AccessPage,
     FirePage,
+      ResetpasswordPage,
   ],
   providers: [
     StatusBar,

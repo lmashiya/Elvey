@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController,App } from 'ionic-angular';
+<<<<<<< HEAD
 //import {WelcomePage} from '../welcome/welcome';
+=======
+>>>>>>> 8b76b2f72fc0d862c300fe2d642f1c43273432eb
 import {DevicesPage} from '../devices/devices';
 import {LoginPage} from "../login/login";
 import * as firebase from 'firebase/app';

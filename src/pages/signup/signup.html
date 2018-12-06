@@ -28,7 +28,8 @@
 
     <ion-item>
       <ion-label floating text-center>Password(enter at least 6 characters)</ion-label>
-      <ion-input type="password" [(ngModel)] = "user.password"></ion-input>
+      <ion-input [type]="passwordType" [(ngModel)] = "user.password"></ion-input>
+        <ion-icon name="eye" [color]="grey" (click)="togglePassword()" item-right=""></ion-icon>
     </ion-item>
 
     <div class="signupButton" text-center>

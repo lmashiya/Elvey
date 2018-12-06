@@ -6,6 +6,11 @@ import {TabsPage} from '../tabs/tabs';
 import {SignupPage} from "../signup/signup";
 import * as firebase from 'firebase/app';
 import {HomePage} from "../home/home";
+<<<<<<< HEAD
+=======
+import {ResetpasswordPage} from "../resetpassword/resetpassword";
+//import {Details} from '../models/details';
+>>>>>>> 8b76b2f72fc0d862c300fe2d642f1c43273432eb
 /**
  * Generated class for the LoginPage page.
  *
@@ -21,6 +26,9 @@ import {HomePage} from "../home/home";
 export class LoginPage {
 
   user = {} as User;
+
+  passwordType: string = 'password';
+  passwordShown: boolean = false;
 
   constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams ,private fire: AngularFireAuth) {
 
@@ -62,15 +70,23 @@ export class LoginPage {
               })
       }
     }
+
+    togglePassword()
+    {
+        if(this.passwordShown)
+        {
+            this.passwordShown = false;
+            this.passwordType = 'password';
+        }
+        else
+            {
+                this.passwordShown = true;
+                this.passwordType = 'text';
+        }
+    }
     resetpass()
     {
-        this.fire.auth.sendPasswordResetEmail(this.user.email)
-            .then(data => {
-                this.alert('Reset password email sent!');
-            })
-            .catch(error => {
-                this.alert('Invalid Email!');
-            })
+        this.navCtrl.push(ResetpasswordPage);
     }
     signupPush()
     {

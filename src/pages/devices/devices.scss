@@ -1,0 +1,23 @@
+page-devices {
+  .button-bottom{
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  }
+
+  .after_logo{
+    background: color($colors,elvey_blue);
+    color: white;
+  }
+
+  .add_button{
+    //position: absolute;
+    //top: 60%;
+    bottom: 30%;
+    width: 100%;
+  }
+
+  .texter{
+    color: color($colors,elvey_blue);
+  }
+}

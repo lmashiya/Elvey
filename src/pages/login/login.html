@@ -12,7 +12,7 @@
 
       <button ion-button icon-only (click)="signupPush()">
         <p>Not A Member?</p>
-        <button default ion-button end round outline class="button2" (click) = "signupPush()" >Singup</button>
+        <button default ion-button end round outline class="button2" (click) = "signupPush()" >Signup</button>
       </button>
 
     </ion-buttons>
@@ -26,6 +26,8 @@
   <img src="assets/imgs/elvey-extra-txt.png">
   <h1>"Security is everyone's concern...but it's our business!"</h1>
   <ion-list>
+
+
     <ion-item>
       <ion-label floating text-center>Email</ion-label>
       <ion-input type="text" [(ngModel)] = "user.email" ></ion-input>
@@ -33,8 +35,11 @@
 
     <ion-item>
       <ion-label floating text-center>Password</ion-label>
-      <ion-input type="password" [(ngModel)] = "user.password" ></ion-input>
+      <ion-input [type]="passwordType" [(ngModel)] = "user.password" ></ion-input>
+      <ion-icon name="eye" [color]="grey" (click)="togglePassword()" item-right=""></ion-icon>
     </ion-item>
+
+
     <div class="loginButton">
       <button ion-button round outline (click) = "login(user)">Login</button>
       <button ion-button round outline (click) = "resetpass(user)">Reset Password</button>

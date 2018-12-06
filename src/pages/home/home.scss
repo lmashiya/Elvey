@@ -9,9 +9,19 @@ page-home {
     background: color($colors,elvey_blue);
     color: white;
   }
+<<<<<<< HEAD
   .displayed {
     display: block;
     margin-left: 100px;
     margin-right: 100px;
 }
+=======
+
+  .add_button{
+    //position: absolute;
+    //top: 60%;
+    bottom: 30%;
+    width: 100%;
+  }
+>>>>>>> 9d711b5447bb59abff7abf8126dd19c1158a237d
 }

@@ -9,4 +9,9 @@ page-home {
     background: color($colors,elvey_blue);
     color: white;
   }
+  .displayed {
+    display: block;
+    margin-left: 100px;
+    margin-right: 100px;
+}
 }

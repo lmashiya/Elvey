@@ -1,68 +1,32 @@
 import { Component } from '@angular/core';
-import { NavController,App } from 'ionic-angular';
-import {LoginPage} from "../login/login";
-import * as firebase from 'firebase/app';
+import { NavController,App, Platform, NavParams} from 'ionic-angular';
 import { AngularFireAuth} from '@angular/fire/auth';
+import {Geolocation} from '@ionic-native/geolocation';
+import { Device } from '@ionic-native/device';
+import {NativeGeocoder, NativeGeocoderOptions, NativeGeocoderReverseResult} from '@ionic-native/native-geocoder';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(private fire: AngularFireAuth,public navCtrl: NavController,public app: App) {
-
+  data:any = {};
+  loading: any;
+  public recd = "";
+  public lat:number;
+  public lng:number;
+  constructor(private fire: AngularFireAuth,public navCtrl: NavController,public app: App,
+     public geo: Geolocation, private plat: Platform, public coder: NativeGeocoder, public device: Device, public navParams: NavParams)
+   {
+     //receiving data from LoginPage
+     this.recd = this.navParams.get('data')
+     console.log(this.recd);
+     alert(this.recd);
   }
+  
 
   logout(){
     const root = this.app.getRootNav();
     root.popToRoot();
   }
-//   provider = {
-//     loggedin: false,
-//     email: '',
-//     name: '',
-//     profilePicture: ''
-
-// }
-
-//   loginWithFacebook()
-//   {
-//       this.fire.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
-//           .then( res => {
-//               this.provider.loggedin = true;
-//               this.provider.email = res.user.email;
-//               this.provider.name = res.user.displayName;
-//               this.provider.profilePicture = res.user.photoURL;
-//               console.log(res);
-//               this.navCtrl.push(HomePage);
-//           })
-//   }
-
-//   loginWithGmail()
-//   {
-//       this.fire.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
-//           .then( res => {
-//               this.provider.loggedin = true;
-//               this.provider.email = res.user.email;
-//               this.provider.name = res.user.displayName;
-//               this.provider.profilePicture = res.user.photoURL;
-//               console.log(res);
-//               this.navCtrl.push(HomePage);
-//           })
-//   }
-//   loginWithTwitter()
-//   {
-//       this.fire.auth.signInWithPopup(new firebase.auth.TwitterAuthProvider())
-//           .then( res => {
-//               this.provider.loggedin = true;
-//               this.provider.email = res.user.email;
-//               this.provider.name = res.user.displayName;
-//               this.provider.profilePicture = res.user.photoURL;
-//               console.log(res);
-//               this.navCtrl.push(HomePage);
-//           })
-
-//   }
-
 }

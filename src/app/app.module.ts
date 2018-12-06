@@ -11,6 +11,10 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import {Geolocation } from '@ionic-native/geolocation';
+import {NativeGeocoder} from '@ionic-native/native-geocoder';
+import { Device } from '@ionic-native/device';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -53,6 +57,9 @@ const FIREBASE_CONFIG = {
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
+    NativeGeocoder,
+    Device,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

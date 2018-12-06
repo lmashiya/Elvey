@@ -92,8 +92,8 @@ export class LoginPage {
                 this.provider.email = res.user.email;
                 this.provider.name = res.user.displayName;
                 this.provider.profilePicture = res.user.photoURL;
-                console.log(res);
-                this.navCtrl.push(HomePage);
+                //passing data to HomePage
+                this.navCtrl.push(HomePage, {'data': res});
             })
     }
 
@@ -102,11 +102,10 @@ export class LoginPage {
         this.fire.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
             .then( res => {
                 this.provider.loggedin = true;
-                this.provider.email = res.user.email;
-                this.provider.name = res.user.displayName;
-                this.provider.profilePicture = res.user.photoURL;
-                console.log(res);
-                this.navCtrl.push(HomePage);
+                    this.provider.email = res.user.email;
+                    this.provider.name = res.user.displayName;
+                    this.provider.profilePicture = res.user.photoURL;
+                this.navCtrl.push(HomePage, {'data': res});
             })
     }
     loginWithTwitter()
@@ -117,8 +116,7 @@ export class LoginPage {
                 this.provider.email = res.user.email;
                 this.provider.name = res.user.displayName;
                 this.provider.profilePicture = res.user.photoURL;
-                console.log(res);
-                this.navCtrl.push(HomePage);
+                this.navCtrl.push(HomePage, {'data': res});
             })
 
     }

@@ -38843,6 +38843,12 @@ page-home .after_logo {
   color: white;
 }
 
+page-home .displayed {
+  display: block;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 page-login .loginButton {
   margin-top: 100io0px;
 }

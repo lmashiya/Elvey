@@ -6,7 +6,6 @@ import {TabsPage} from '../tabs/tabs';
 import {SignupPage} from "../signup/signup";
 import * as firebase from 'firebase/app';
 import {HomePage} from "../home/home";
-import {Details} from '../models/details';
 /**
  * Generated class for the LoginPage page.
  *

@@ -11,19 +11,18 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-<<<<<<< HEAD
+
 import {Geolocation } from '@ionic-native/geolocation';
 import {NativeGeocoder} from '@ionic-native/native-geocoder';
 import { Device } from '@ionic-native/device';
 
-=======
+
 import {ResetpasswordPage} from "../pages/resetpassword/resetpassword";
 import {DevicesPage} from '../pages/devices/devices';
 import {CameraPage} from '../pages/camera/camera';
 import {FirePage} from '../pages/fire/fire';
 import {AccessPage} from '../pages/access/access';
 import {IntrusionPage} from '../pages/intrusion/intrusion';
->>>>>>> 9d711b5447bb59abff7abf8126dd19c1158a237d
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';

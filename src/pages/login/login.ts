@@ -56,6 +56,7 @@ export class LoginPage {
                       }
                       else {
                           this.alert('You have been logged in!');
+                          this.navCtrl.push(HomePage, {'data': this.user});
                           this.navCtrl.setRoot(TabsPage);
                       }
                       //logged in
@@ -90,49 +91,6 @@ export class LoginPage {
     {
         this.navCtrl.setRoot(SignupPage);
     }
-    provider = {
-        loggedin: false,
-        email: '',
-        name: '',
-        profilePicture: ''
 
-    }
-
-    loginWithFacebook()
-    {
-        this.fire.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
-            .then( res => {
-                this.provider.loggedin = true;
-                this.provider.email = res.user.email;
-                this.provider.name = res.user.displayName;
-                this.provider.profilePicture = res.user.photoURL;
-                //passing data to HomePage
-                this.navCtrl.push(HomePage, {'data': res});
-            })
-    }
-
-    loginWithGmail()
-    {
-        this.fire.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
-            .then( res => {
-                this.provider.loggedin = true;
-                    this.provider.email = res.user.email;
-                    this.provider.name = res.user.displayName;
-                    this.provider.profilePicture = res.user.photoURL;
-                this.navCtrl.push(HomePage, {'data': res});
-            })
-    }
-    loginWithTwitter()
-    {
-        this.fire.auth.signInWithPopup(new firebase.auth.TwitterAuthProvider())
-            .then( res => {
-                this.provider.loggedin = true;
-                this.provider.email = res.user.email;
-                this.provider.name = res.user.displayName;
-                this.provider.profilePicture = res.user.photoURL;
-                this.navCtrl.push(HomePage, {'data': res});
-            })
-
-    }
 
 }

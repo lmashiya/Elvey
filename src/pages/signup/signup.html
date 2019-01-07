@@ -29,14 +29,23 @@
 
     <ion-item>
       <ion-label floating text-center>Password(enter at least 6 characters)</ion-label>
-      <ion-input [type]="passwordType" [(ngModel)] = "user.password"></ion-input>
-        <ion-icon name="eye" [color]="grey" (click)="togglePassword()" item-right=""></ion-icon>
+      <ion-input
+     [(ngModel)]="user.password"
+      name="password"
+      type="password"
+      #password="ngModel"
+      [minlength]="10"
+      [pattern]="PASSWORD_REGEX"
+      required>
+    </ion-input>
     </ion-item>
+    <p>
+      Password must contain one lowercase, one uppercase, one number, one
+      unique character such as !@#$%^&? and be at least 6 characters long.
+  </p>
 
     <div class="signupButton" text-center>
       <button ion-button round outline (click) = "signup(user)">Signup</button>
     </div>
-
-
   </ion-list>
 </ion-content>

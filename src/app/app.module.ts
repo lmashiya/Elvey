@@ -23,6 +23,8 @@ import {CameraPage} from '../pages/camera/camera';
 import {FirePage} from '../pages/fire/fire';
 import {AccessPage} from '../pages/access/access';
 import {IntrusionPage} from '../pages/intrusion/intrusion';
+import {CameralistPage} from '../pages/cameralist/cameralist';
+import {CameralistipPage} from '../pages/cameralistip/cameralistip'
 import { File } from '@ionic-native/file';
 import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
@@ -55,6 +57,8 @@ const FIREBASE_CONFIG = {
     AccessPage,
     FirePage,
       ResetpasswordPage,
+      CameralistPage,
+      CameralistipPage,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +81,8 @@ const FIREBASE_CONFIG = {
     AccessPage,
     FirePage,
     ResetpasswordPage,
+    CameralistPage,
+    CameralistipPage,
   ],
   providers: [
     StatusBar,

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DevicesPage } from '../devices/devices';
 
 /**
  * Generated class for the AccessPage page.
@@ -20,6 +21,10 @@ export class AccessPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AccessPage');
+  }
+  BackButton()
+  {
+      this.navCtrl.push(DevicesPage); 
   }
 
 }

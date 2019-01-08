@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DevicesPage } from '../devices/devices';
 
 /**
  * Generated class for the FirePage page.
@@ -20,6 +21,10 @@ export class FirePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FirePage');
+  }
+  BackButton()
+  {
+      this.navCtrl.push(DevicesPage); 
   }
 
 }

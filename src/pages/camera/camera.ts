@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DevicesPage } from '../devices/devices';
 
 /**
  * Generated class for the CameraPage page.
@@ -20,6 +21,12 @@ export class CameraPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CameraPage');
+  }
+
+
+  BackButton()
+  {
+      this.navCtrl.push(DevicesPage); 
   }
 
 }

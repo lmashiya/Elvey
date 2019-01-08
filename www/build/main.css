@@ -42451,9 +42451,17 @@ page-access .after_logo {
   color: white;
 }
 
+page-access .texter {
+  color: #00599c;
+}
+
 page-camera .after_logo {
   background: #00599c;
   color: white;
+}
+
+page-camera .texter {
+  color: #00599c;
 }
 
 page-devices .button-bottom {
@@ -42479,6 +42487,10 @@ page-devices .texter {
 page-fire .after_logo {
   background: #00599c;
   color: white;
+}
+
+page-fire .texter {
+  color: #00599c;
 }
 
 page-home .button-bottom {
@@ -42507,6 +42519,10 @@ page-home .add_button {
 page-intrusion .after_logo {
   background: #00599c;
   color: white;
+}
+
+page-intrusion .texter {
+  color: #00599c;
 }
 
 page-login .loginButton {

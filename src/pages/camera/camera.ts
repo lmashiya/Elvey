@@ -37,7 +37,7 @@ export class CameraPage {
   }
 
   goToCameraListIp(){
-    this.navCtrl.push(CameralistIpPage)
+    this.navCtrl.push(CameralistipPage)
   }
 
 }

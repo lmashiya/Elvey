@@ -6,28 +6,52 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="tester">
   <ion-list>
-    <ion-list-header>Follow us on the following socoail media platforms</ion-list-header>
-    <ion-item>
+    <ion-list-header>Follow us on the following platforms:</ion-list-header>
+    <ion-item class="tester">
       <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+      <b>Our Official Website:</b>
+      <p><a href='#' (click)="goToWebsite()">http://www.elvey.co.za</a></p>
     </ion-item>
-    <ion-item>
+    <ion-item class="tester">
         <ion-icon name="ionic" item-start></ion-icon>
-        @ionicframework
+        <b>Our Address:</b>
+        <p>27 GreenStone PI</p>
+        <p>Modderfontein</p>
+        <p>Lethabong</p>
+        <p>1609</p>
       </ion-item>
-      <ion-item>
+      <ion-item class="tester">
           <ion-icon name="ionic" item-start></ion-icon>
-          @ionicframework
+         <b>Or Contact Us On:</b>
+          <p>(011) 401 6700</p>
         </ion-item>
-        <ion-item>
+        <ion-item class="tester">
             <ion-icon name="ionic" item-start></ion-icon>
-            @ionicframework
+          Follow us on:
+
+          <p>
+              <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                        <button ion-button clear (click)="goToTwitter()"><img src="assets/imgs/twt.png"></button>
+                      </ion-col>
+                      <ion-col>
+      
+                        <button ion-button clear (click)="goToFacebook()"><img src="assets/imgs/fbbtn.png"></button>
+                      </ion-col>
+                      <ion-col>
+                        <button ion-button clear (click)="goToLinkedIn()"><img src="assets/imgs/li.png"></button>
+                      </ion-col>
+                      <ion-col>
+                        <button ion-button clear (click)="goToYouTube()"> <img src="assets/imgs/ut.png"></button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+          </p>
           </ion-item>
-          <ion-item>
-              <ion-icon name="ionic" item-start></ion-icon>
-              @ionicframework
-            </ion-item>
+          
+          
   </ion-list>
 </ion-content>

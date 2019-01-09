@@ -34,16 +34,10 @@
       name="password"
       type="password"
       #password="ngModel"
-      [minlength]="10"
-      [pattern]="PASSWORD_REGEX"
+      [minlength]="6"
       required>
     </ion-input>
     </ion-item>
-    <p>
-      Password must contain one lowercase, one uppercase, one number, one
-      unique character such as !@#$%^&? and be at least 6 characters long.
-  </p>
-
     <div class="signupButton" text-center>
       <button ion-button round outline (click) = "signup(user)">Signup</button>
     </div>

@@ -10,6 +10,8 @@ import { Transfer, TransferObject, FileUploadOptions } from '@ionic-native/trans
 import { FilePath } from '@ionic-native/file-path';
 import { Camera, DestinationType } from '@ionic-native/camera';
 import { ActionSheetController, ToastController, LoadingController, Loading } from 'ionic-angular';
+import {LoginPage} from '../login/login';
+
  
 
 declare var cordova: any;
@@ -19,13 +21,9 @@ declare var cordova: any;
 })
 export class HomePage {
   public recd = "";
-  lastImage: string = null;
-  loading: Loading;
  
   constructor(private fire: AngularFireAuth,public navCtrl: NavController,public app: App,
-     public geo: Geolocation, private platform: Platform, public coder: NativeGeocoder, public navParams: NavParams, 
-     private camera: Camera, private transfer: Transfer, private file: File, private filePath: FilePath, 
-     public actionSheetCtrl: ActionSheetController, public toastCtrl: ToastController,public loadingCtrl: LoadingController)
+     public geo: Geolocation,public coder: NativeGeocoder, public navParams: NavParams, public toast: ToastController)
   {
      //receiving data from LoginPage
      this.recd = this.navParams.get('data');
@@ -35,8 +33,12 @@ export class HomePage {
   
 
   logout(){
-    const root = this.app.getRootNav();
-    root.popToRoot();
+      this.toast.create({
+        message: 'Logout successful',
+        duration: 3000,
+        position: 'top'
+      }).present();
+      this.navCtrl.setRoot(LoginPage);
   }
 
   add_device(){

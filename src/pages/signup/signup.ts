@@ -1,11 +1,10 @@
 import {Component, ViewChild} from '@angular/core';
 import {AlertController, IonicPage, NavController, NavParams, Navbar} from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
 import { AngularFireAuth} from '@angular/fire/auth';
 import { User } from '../../models/user';
-//import firebase from 'firebase/*';
 import * as firebase from 'firebase/app';
 import {LoginPage} from '../login/login';
+import {ToastController} from 'ionic-angular';
 
 /**
  * Generated class for the SignupPage page.
@@ -25,10 +24,9 @@ error: any;
 user = {} as User;
     passwordType: string = 'password';
     passwordShown: boolean = false;
-    public PASSWORD_REGEX = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,})"
   
     @ViewChild(Navbar) navBar: Navbar;
-  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, private aFauth: AngularFireAuth) {
+  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, private aFauth: AngularFireAuth, public toast: ToastController) {
   }
 
 
@@ -39,39 +37,45 @@ user = {} as User;
       }
     console.log('ionViewDidLoad SignupPage');
   }
-    alert(message: string)
-    {
-        this.alertCtrl.create({
-            title: 'Info!',
-            subTitle: message,
-            buttons: ['OK']
-        }).present();
-    }
     
   async signup(user : User){
     try{
-      if(user.password == this.PASSWORD_REGEX){
+
+      if(user.password.length < 6){
+        this.toast.create({
+          message: 'Password must at least be 6 characters long!',
+          duration: 3000,
+          position: 'top',
+          cssClass: 'texter'
+        }).present();
+        }
+
         const userObj = await this.aFauth.auth.createUserWithEmailAndPassword(user.email, user.password);
         if(userObj){
-            this.alert('You have successfully signed up!');
+          this.toast.create({
+            message: 'You have successfully signed up! \nPlease log into your email for verification before attempting to login!',
+            duration: 3000,
+            position: 'top',
+            cssClass: 'texter'
+          }).present();
+
           if(this.sendVerification()){
             this.navCtrl.push(LoginPage);
             if(this.isVerified()){
-              console.log("have to redirect")
             }
               
             }
           }
        
       }
-      else
-      {
-        alert("Password must contain one lowercase, one uppercase, one number, one unique character such as !@#$%^&? and be at least 6 characters long.");
-      }
-    }
     catch(err){
       this.error = err;
-      this.alert(err);
+      this.toast.create({
+        message: (err),
+        duration: 3000,
+        position: 'top',
+        cssClass: 'texter'
+      }).present();
     }
   }
 

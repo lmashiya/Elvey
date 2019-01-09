@@ -27,7 +27,7 @@ var AccessPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__access__["a" /* AccessPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__access__["a" /* AccessPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__access__["a" /* AccessPage */]),
             ],
         })
     ], AccessPageModule);

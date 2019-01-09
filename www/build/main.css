@@ -42533,6 +42533,10 @@ page-login .loginButton {
   margin-top: 100io0px;
 }
 
+page-login .texter {
+  background: #00599c;
+}
+
 page-signup .signupButton {
   margin-top: 9px;
 }

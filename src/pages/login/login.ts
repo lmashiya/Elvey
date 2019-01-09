@@ -7,6 +7,7 @@ import {SignupPage} from "../signup/signup";
 import * as firebase from 'firebase/app';
 import {HomePage} from "../home/home";
 import {ResetpasswordPage} from "../resetpassword/resetpassword";
+import { ActionSheetController, ToastController, LoadingController, Loading } from 'ionic-angular';
 //import {Details} from '../models/details';
 
 /**
@@ -28,23 +29,20 @@ export class LoginPage {
   passwordType: string = 'password';
   passwordShown: boolean = false;
 
-  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams ,private fire: AngularFireAuth) {
+  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams ,private fire: AngularFireAuth, public toast: ToastController) {
 
   }
 
-  alert(message: string)
-  {
-      this.alertCtrl.create(
-          {title: 'Info!',
-            subTitle: message,
-            buttons: ['OK']
-        }).present();
-    }
     login(){
 
       if (this.user.email == null || this.user.password == null)
       {
-          this.alert('Empty Email/Password!');
+          this.toast.create({
+            message: 'Empty Email/Password!',
+            duration: 3000,
+            position: 'top',
+            cssClass: 'texter'
+          }).present();
       }
       else {
           this.fire.auth.signInWithEmailAndPassword(this.user.email, this.user.password)
@@ -52,19 +50,35 @@ export class LoginPage {
                       console.log('Got data', this.fire.auth.currentUser);
                       console.log(firebase.auth().currentUser.emailVerified);
                       if (firebase.auth().currentUser.emailVerified == false) {
-                          this.alert('Verify email first!');
+                          this.toast.create({
+                            message: 'Please Verify email first!',
+                            duration: 3000,
+                            position: 'top',
+                            cssClass: 'texter'
+                          }).present();
                       }
                       else {
-                          this.alert('You have been logged in!');
+                        this.toast.create({
+                            message: 'Login successful!',
+                            duration: 3000,
+                            position: 'top',
+                            cssClass: 'texter'
+                          }).present();
                           this.navCtrl.push(HomePage, {'data': this.user});
                           this.navCtrl.setRoot(TabsPage);
                       }
+                     
                       //logged in
                   }
               )
               .catch(error => {
                   console.log('Got an error', error);
-                  this.alert('Invalid Email/Password!');
+                  this.toast.create({
+                    message: 'Invalid Email/Password!',
+                    duration: 3000,
+                    position: 'top',
+                    cssClass: 'texter'
+                  }).present();
                   //error
               })
       }

@@ -27,7 +27,7 @@ var CameralistipPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__cameralistip__["a" /* CameralistipPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cameralistip__["a" /* CameralistipPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cameralistip__["a" /* CameralistipPage */]),
             ],
         })
     ], CameralistipPageModule);

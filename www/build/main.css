@@ -42446,6 +42446,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-about .texter {
+  color: #00599c;
+}
+
 page-access .after_logo {
   background: #00599c;
   color: white;

@@ -42534,7 +42534,15 @@ page-login .loginButton {
 }
 
 page-login .texter {
-  background: #00599c;
+  color: #00599c;
+}
+
+page-login ion-grid {
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 page-signup .signupButton {

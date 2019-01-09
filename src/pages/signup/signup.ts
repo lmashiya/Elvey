@@ -41,15 +41,6 @@ user = {} as User;
   async signup(user : User){
     try{
 
-      if(user.password.length < 6){
-        this.toast.create({
-          message: 'Password must at least be 6 characters long!',
-          duration: 3000,
-          position: 'top',
-          cssClass: 'texter'
-        }).present();
-        }
-
         const userObj = await this.aFauth.auth.createUserWithEmailAndPassword(user.email, user.password);
         if(userObj){
           this.toast.create({

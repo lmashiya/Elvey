@@ -7,7 +7,7 @@ import {SignupPage} from "../signup/signup";
 import * as firebase from 'firebase/app';
 import {HomePage} from "../home/home";
 import {ResetpasswordPage} from "../resetpassword/resetpassword";
-import { ActionSheetController, ToastController, LoadingController, Loading } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 //import {Details} from '../models/details';
 
 /**

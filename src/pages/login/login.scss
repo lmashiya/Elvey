@@ -3,7 +3,11 @@ page-login {
     margin-top: 100io0px;
   }
   .texter{
-    background: color($colors,elvey_blue);
+    color: color($colors,elvey_blue);
   }
+  ion-grid {
+    height: 100%;
+    justify-content: center;
+}
 
 }

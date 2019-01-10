@@ -1,6 +1,21 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+       <ion-buttons left>
+           <button ion-button (click)="BackButton()">
+               <ion-icon class="customIcon" name="arrow-back"></ion-icon>
+           </button>
+       </ion-buttons>
+    </ion-navbar>
+   </ion-header>
 <ion-content padding text-center>
   <img src="assets/imgs/elvey-extra-txt.png">
   <div id="welcome_text" class="after_logo">FIRE INTRUSION</div>
+  <ion-list no-lines text-center>
+  <ion-item class = "texter">
+        Detectors
+        <button ion-button outline item-end (click) = "goToCamera()">Add Device</button>
+      </ion-item>
+    </ion-list>
 
 
 </ion-content>

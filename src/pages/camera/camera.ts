@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DevicesPage } from '../devices/devices';
+import {CameralistPage} from '../cameralist/cameralist';
+import {CameralistipPage} from '../cameralistip/cameralistip';
+
 
 /**
  * Generated class for the CameraPage page.
@@ -20,6 +24,20 @@ export class CameraPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CameraPage');
+}
+
+
+  BackButton()
+  {
+      this.navCtrl.push(DevicesPage);
+  }
+
+  goToCameraList(){
+    this.navCtrl.push(CameralistPage)
+  }
+
+  goToCameraListIp(){
+    this.navCtrl.push(CameralistipPage)
   }
 
 }

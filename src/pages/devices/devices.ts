@@ -4,6 +4,7 @@ import {CameraPage} from '../camera/camera';
 import {IntrusionPage} from '../intrusion/intrusion';
 import {FirePage} from '../fire/fire';
 import {AccessPage} from '../access/access';
+import { HomePage } from '../home/home';
 
 
 /**
@@ -38,5 +39,9 @@ export class DevicesPage {
   }
   goToFire(){
     this.navCtrl.push(FirePage);
+  }
+  BackButton()
+  {
+      this.navCtrl.push(HomePage);
   }
 }

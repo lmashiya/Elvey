@@ -12,7 +12,6 @@
              <ion-icon class="customIcon" name="arrow-back"></ion-icon>
          </button>
      </ion-buttons>
-     <ion-title>Back To Login</ion-title>
   </ion-navbar>
  </ion-header>
 
@@ -29,14 +28,17 @@
 
     <ion-item>
       <ion-label floating text-center>Password(enter at least 6 characters)</ion-label>
-      <ion-input [type]="passwordType" [(ngModel)] = "user.password"></ion-input>
-        <ion-icon name="eye" [color]="grey" (click)="togglePassword()" item-right=""></ion-icon>
+      <ion-input
+     [(ngModel)]="user.password"
+      name="password"
+      type="password"
+      #password="ngModel"
+      [minlength]="6"
+      required>
+    </ion-input>
     </ion-item>
-
     <div class="signupButton" text-center>
       <button ion-button round outline (click) = "signup(user)">Signup</button>
     </div>
-
-
   </ion-list>
 </ion-content>

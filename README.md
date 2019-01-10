@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# Elvey
+an app for integrating devices into one app
+>>>>>>> master
 # Elvey central control panel
 
 This here app is built with the intention of having a central control system designed to accommodate some, if not all security components supplied by Elvey Security Technologies.
@@ -23,4 +28,7 @@ With our working with firebase, you're gonna have to run:
 To run the application run:
   ```
   ionic serve
+<<<<<<< HEAD
   ```
+=======
+>>>>>>> master

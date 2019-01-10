@@ -1,25 +1,29 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title text-center>Home</ion-title>
-     <ion-icon name="menu"></ion-icon>
-  </ion-navbar>
-</ion-header>
+    <ion-navbar hideBackButton>
+      <ion-title text-center>
+        Home
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
 
 <ion-content padding text-center>
   <img src="assets/imgs/elvey-extra-txt.png">
   <div id="welcome_text" class="after_logo">WELCOME</div>
-  <ion-card text-center>
-      <img class="displayed"  height="150 px" width="150 px" src="{{ recd.user.photoURL }}"/>
-    <ion-card-content>
-      <ion-card-title>
-        {{ recd.user.displayName }}
-      </ion-card-title>
-      <p style="text-align: center">
-        {{ recd.user.email }}
-      </p>
-      <div class="button-bottom"text-center>
+<ng-container text-center>
+  <ion-card>
+      <img src="assets/imgs/placeholder.png" height='150' width='80'/>
+      <p>Name: </p>
+      <p>Email: </p>
+   
+    </ion-card>
+    </ng-container>
+    <div  text-center>
+        <button ion-button (click) = "add_device()">Add Devices</button>
+      </div>
+    <ion-footer>
+         <div class="button-bottom" text-center>
           <button ion-button small round outline (click) = "logout()">LogOut</button>
         </div>
-      </ion-card-content>
-    </ion-card>
+    </ion-footer> 
   </ion-content>
+  

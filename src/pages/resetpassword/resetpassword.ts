@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {User} from "../../models/user";
-import {TabsPage} from "../tabs/tabs";
-import * as firebase from 'firebase/app';
 import {AngularFireAuth} from "@angular/fire/auth";
 import {LoginPage} from "../login/login";
-import {HomePage} from "../home/home";
+import {ToastController} from 'ionic-angular';
 
 /**
  * Generated class for the ResetpasswordPage page.
@@ -22,16 +20,8 @@ import {HomePage} from "../home/home";
 export class ResetpasswordPage {
     user = {} as User;
 
-  constructor(private alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams, private fire: AngularFireAuth) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private fire: AngularFireAuth, public toast: ToastController) {
   }
-    alert(message: string)
-    {
-        this.alertCtrl.create({
-            title: 'Info!',
-            subTitle: message,
-            buttons: ['OK']
-        }).present();
-    }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ResetpasswordPage');
@@ -41,16 +31,31 @@ export class ResetpasswordPage {
   {
       if (this.user.email == null)
       {
-          this.alert('Empty Email/Password!');
+          this.toast.create({
+            message: 'Empty Email/Password!',
+            duration: 3000,
+            position: 'top',
+            cssClass: 'texter'
+          }).present();
       }
       else {
           this.fire.auth.sendPasswordResetEmail(this.user.email)
               .then(data => {
-                  this.alert('Reset password email sent!');
+                  this.toast.create({
+                    message: 'Reset password email sent! Please login to your emails to rest your password!',
+                    duration: 3000,
+                    position: 'top',
+                    cssClass: 'texter'
+                  }).present();
                   this.navCtrl.push(LoginPage);
               })
               .catch(error => {
-                  this.alert('Invalid Email!');
+                this.toast.create({
+                    message: 'Invalid Email!',
+                    duration: 3000,
+                    position: 'top',
+                    cssClass: 'texter'
+                  }).present();
               })
       }
   }

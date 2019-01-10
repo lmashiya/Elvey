@@ -23,17 +23,23 @@ import {CameraPage} from '../pages/camera/camera';
 import {FirePage} from '../pages/fire/fire';
 import {AccessPage} from '../pages/access/access';
 import {IntrusionPage} from '../pages/intrusion/intrusion';
+import {CameralistPage} from '../pages/cameralist/cameralist';
+import {CameralistipPage} from '../pages/cameralistip/cameralistip'
+import { File } from '@ionic-native/file';
+import { Transfer } from '@ionic-native/transfer';
+import { FilePath } from '@ionic-native/file-path';
+import { Camera } from '@ionic-native/camera'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 const FIREBASE_CONFIG = {
-    apiKey: "AIzaSyBh-bIhgu56St2nBNBqv8ULJ2Ci246VXn0",
-    authDomain: "elveyapp.firebaseapp.com",
-    databaseURL: "https://elveyapp.firebaseio.com",
-    projectId: "elveyapp",
-    storageBucket: "elveyapp.appspot.com",
-    messagingSenderId: "611172371578"
+  apiKey: "AIzaSyBqYOyccGOFdplohm76JuRGpEkMmB5PZVI",
+  authDomain: "zaas-dc462.firebaseapp.com",
+  databaseURL: "https://zaas-dc462.firebaseio.com",
+  projectId: "zaas-dc462",
+  storageBucket: "zaas-dc462.appspot.com",
+  messagingSenderId: "694656193266"
   };
 
 @NgModule({
@@ -51,6 +57,8 @@ const FIREBASE_CONFIG = {
     AccessPage,
     FirePage,
       ResetpasswordPage,
+      CameralistPage,
+      CameralistipPage,
   ],
   imports: [
     BrowserModule,
@@ -72,7 +80,9 @@ const FIREBASE_CONFIG = {
     CameraPage,
     AccessPage,
     FirePage,
-      ResetpasswordPage,
+    ResetpasswordPage,
+    CameralistPage,
+    CameralistipPage,
   ],
   providers: [
     StatusBar,
@@ -80,6 +90,10 @@ const FIREBASE_CONFIG = {
     Geolocation,
     NativeGeocoder,
     Device,
+    File,
+    Transfer,
+    Camera,
+    FilePath,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -42446,14 +42446,30 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-about .texter {
+  color: #00599c;
+}
+
 page-access .after_logo {
   background: #00599c;
   color: white;
 }
 
+page-access .texter {
+  color: #00599c;
+}
+
 page-camera .after_logo {
   background: #00599c;
   color: white;
+}
+
+page-camera .texter {
+  color: #00599c;
+}
+
+page-contact .texter {
+  color: #00599c;
 }
 
 page-devices .button-bottom {
@@ -42481,6 +42497,10 @@ page-fire .after_logo {
   color: white;
 }
 
+page-fire .texter {
+  color: #00599c;
+}
+
 page-home .button-bottom {
   position: absolute;
   bottom: 5%;
@@ -42494,6 +42514,7 @@ page-home .after_logo {
 
 page-home .displayed {
   display: block;
+  margin-top: 10px;
   margin-left: 100px;
   margin-right: 100px;
 }
@@ -42508,8 +42529,24 @@ page-intrusion .after_logo {
   color: white;
 }
 
+page-intrusion .texter {
+  color: #00599c;
+}
+
 page-login .loginButton {
   margin-top: 100io0px;
+}
+
+page-login .texter {
+  color: #00599c;
+}
+
+page-login ion-grid {
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 page-signup .signupButton {

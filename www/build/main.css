@@ -42468,6 +42468,24 @@ page-camera .texter {
   color: #00599c;
 }
 
+page-cameralist .after_logo {
+  background: #00599c;
+  color: white;
+}
+
+page-cameralist .texter {
+  color: #00599c;
+}
+
+page-cameralistip .after_logo {
+  background: #00599c;
+  color: white;
+}
+
+page-cameralistip .texter {
+  color: #00599c;
+}
+
 page-contact .texter {
   color: #00599c;
 }

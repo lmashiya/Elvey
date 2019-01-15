@@ -19,22 +19,24 @@
 
   <img src="assets/imgs/elvey-extra-txt.png">
   <h1>"Security is everyone's concern...but it's our business!"</h1>
-  <ion-list>
+  <ion-list class="texter">
 
-    <ion-item>
+    <ion-item >
       <ion-label floating text-center>Email</ion-label>
-      <ion-input type="text" [(ngModel)] = "user.email"></ion-input>
+      <ion-input text-center type="text" [(ngModel)] = "user.email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating text-center>Password(enter at least 6 characters)</ion-label>
       <ion-input
+
      [(ngModel)]="user.password"
       name="password"
       type="password"
       #password="ngModel"
       [minlength]="6"
-      required>
+      required
+     text-center>
     </ion-input>
     </ion-item>
     <div class="signupButton" text-center>

@@ -8,7 +8,6 @@
 
   <ion-navbar hideBackButton>
     <ion-title text-center>ElveyApp</ion-title>
-
   </ion-navbar>
 
 </ion-header>
@@ -20,14 +19,14 @@
   <ion-list>
 
 
-    <ion-item>
+    <ion-item class="texter">
       <ion-label floating text-center>Email</ion-label>
-      <ion-input type="text" [(ngModel)] = "user.email" ></ion-input>
+      <ion-input text-center  type="text" [(ngModel)] = "user.email" ></ion-input>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="texter">
       <ion-label floating text-center>Password</ion-label>
-      <ion-input [type]="passwordType" [(ngModel)] = "user.password" ></ion-input>
+      <ion-input text-center [type]="passwordType" [(ngModel)] = "user.password" ></ion-input>
       <ion-icon name="eye" [color]="grey" (click)="togglePassword()" item-right=""></ion-icon>
     </ion-item>
 

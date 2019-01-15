@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ItemOptions, ItemContent } from 'ionic-angular';
 import { CameraPage } from '../camera/camera';
 import { HomePage } from '../home/home';
-import { maybeQueueResolutionOfComponentResources } from '@angular/core/src/metadata/resource_loading';
 
 /**
  * Generated class for the CameralistPage page.

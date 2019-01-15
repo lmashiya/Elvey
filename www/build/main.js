@@ -105,14 +105,12 @@ var CameralistPage = /** @class */ (function () {
     CameralistPage.prototype.goToHome = function (item) {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */], { 'data': item });
-        console.log("I am in camera List");
     };
-    var _a, _b;
     CameralistPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-cameralist',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/cameralist/cameralist.html"*/'<!--\n  Generated template for the CameralistPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButtonCamera()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center class="tester">\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">HD Analogue Cameras</div>\n\n  <ion-list *ngFor="let item of items" no-lines text-center >\n    \n      <ion-item class = "texter">\n          <ion-img src="{{item.image}}" style="width:50px;height:50px;"></ion-img>\n          <p>{{ item.name }}</p>\n          <button ion-button outline item-end (click) = "goToHome(item)">Add Device</button>\n        </ion-item>\n  </ion-list>\n  </ion-content>\n  \n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/cameralist/cameralist.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" ? _a : Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" ? _b : Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], CameralistPage);
     return CameralistPage;
 }());
@@ -553,11 +551,11 @@ var map = {
 		8
 	],
 	"../pages/cameralist/cameralist.module": [
-		576,
+		573,
 		7
 	],
 	"../pages/cameralistip/cameralistip.module": [
-		575,
+		571,
 		6
 	],
 	"../pages/devices/devices.module": [
@@ -569,19 +567,19 @@ var map = {
 		4
 	],
 	"../pages/intrusion/intrusion.module": [
-		571,
+		572,
 		3
 	],
 	"../pages/login/login.module": [
-		572,
+		576,
 		2
 	],
 	"../pages/resetpassword/resetpassword.module": [
-		573,
+		574,
 		1
 	],
 	"../pages/signup/signup.module": [
-		574,
+		575,
 		0
 	]
 };
@@ -848,12 +846,12 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/camera/camera.module#CameraPageModule', name: 'CameraPage', segment: 'camera', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/devices/devices.module#DevicesPageModule', name: 'DevicesPage', segment: 'devices', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/fire/fire.module#FirePageModule', name: 'FirePage', segment: 'fire', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cameralistip/cameralistip.module#CameralistipPageModule', name: 'CameralistipPage', segment: 'cameralistip', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/intrusion/intrusion.module#IntrusionPageModule', name: 'IntrusionPage', segment: 'intrusion', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cameralist/cameralist.module#CameralistPageModule', name: 'CameralistPage', segment: 'cameralist', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/resetpassword/resetpassword.module#ResetpasswordPageModule', name: 'ResetpasswordPage', segment: 'resetpassword', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cameralistip/cameralistip.module#CameralistipPageModule', name: 'CameralistipPage', segment: 'cameralistip', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cameralist/cameralist.module#CameralistPageModule', name: 'CameralistPage', segment: 'cameralist', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_5__angular_fire__["a" /* AngularFireModule */].initializeApp(FIREBASE_CONFIG),
@@ -1062,12 +1060,11 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.add_device = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__devices_devices__["a" /* DevicesPage */]);
     };
-    var _a, _b, _c, _d, _e;
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/home/home.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n      <ion-title text-center>\n        Home\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">WELCOME</div>\n<ng-container text-center>\n  <ion-card>\n      <img src="assets/imgs/placeholder.png" height=\'150\' width=\'80\'/>\n      <!-- <p>Name: {{recd}}</p> -->\n      <p>{{recd}}</p>\n   \n    </ion-card>\n    <ion-card *ngIf="recd">\n        <ion-img src="{{recd.image}}" style="width:1000px;height:100px;"></ion-img>\n     {{recd.name}}\n      </ion-card>\n    </ng-container>\n    <div  text-center>\n        <button ion-button (click) = "add_device()">Add Devices</button>\n      </div>\n    <ion-footer>\n         <div class="button-bottom" text-center>\n          <button ion-button small round outline (click) = "logout()">LogOut</button>\n        </div>\n    </ion-footer> \n  </ion-content>\n  '/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */]) === "function" ? _a : Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" ? _b : Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" ? _c : Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]) === "function" ? _d : Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */]) === "function" ? _e : Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */]])
     ], HomePage);
     return HomePage;
 }());
@@ -1189,12 +1186,11 @@ var LoginPage = /** @class */ (function () {
     LoginPage.prototype.signupPush = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__signup_signup__["a" /* SignupPage */]);
     };
-    var _a, _b, _c, _d, _e;
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-login',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar hideBackButton>\n    <ion-title text-center>ElveyApp</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <h3 class="texter">"Providing Complete Peace of Mind"</h3>\n  <ion-list>\n\n\n    <ion-item>\n      <ion-label floating text-center>Email</ion-label>\n      <ion-input type="text" [(ngModel)] = "user.email" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating text-center>Password</ion-label>\n      <ion-input [type]="passwordType" [(ngModel)] = "user.password" ></ion-input>\n      <ion-icon name="eye" [color]="grey" (click)="togglePassword()" item-right=""></ion-icon>\n    </ion-item>\n\n\n    <div class="loginButton">\n    <ion-grid>\n      <ion-row>\n        <ion-col text-center>\n            <button ion-button round outline (click) = "login(user)">Login</button>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col text-center>\n            <button ion-button round outline (click) = "resetpass(user)">Reset Password</button>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n          <ion-col text-center class="button2">\n         <b class="texter">Not A Member?</b>\n         <br>\n          <button ion-button end round outline (click) = "signupPush()" >Signup</button>\n          </ion-col>\n      </ion-row>\n    </ion-grid>\n    </div>\n  </ion-list>\n  </ion-content>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" ? _a : Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" ? _b : Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" ? _c : Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__["a" /* AngularFireAuth */]) === "function" ? _d : Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]) === "function" ? _e : Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
     ], LoginPage);
     return LoginPage;
 }());

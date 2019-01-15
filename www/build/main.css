@@ -42542,6 +42542,12 @@ page-home .add_button {
   width: 100%;
 }
 
+page-home .icon {
+  float: right;
+  height: 40px;
+  width: auto;
+}
+
 page-intrusion .after_logo {
   background: #00599c;
   color: white;

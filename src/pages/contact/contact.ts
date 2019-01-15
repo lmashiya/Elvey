@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {LoginPage} from "../login/login";
+import { ToastController } from 'ionic-angular';
+import {App} from 'ionic-angular';
 
 @Component({
   selector: 'page-contact',
@@ -8,7 +10,7 @@ import {LoginPage} from "../login/login";
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public toast: ToastController, public app: App) {
 
   }
   goToWebsite()

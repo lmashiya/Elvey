@@ -5,7 +5,7 @@
       </ion-title>
         <div class="button-bottom" text-center>
             <!--<button ion-button small round outline (click) = "logout()">LogOut</button>-->
-            <ion-icon style="float:right" height="40px" width="auto" ios="ios-log-out" md="md-log-out" (click) = "logout()" >LogOut</ion-icon>
+            <ion-icon class="icon" ios="ios-log-out" md="md-log-out" (click) = "logout()" >LogOut</ion-icon>
         </div>
     </ion-navbar>
   </ion-header>
@@ -14,12 +14,13 @@
   <img src="assets/imgs/elvey-extra-txt.png">
   <div id="welcome_text" class="after_logo">WELCOME</div>
 <ng-container text-center>
-  <ion-card>
-      <img src="assets/imgs/placeholder.png" height='auto' width='auto'/>
-      <!-- <p>Name: {{recd}}</p> -->
+    <ion-row justify-content-center align-items-center >
+        <ion-card style="width:100px;height:100px;" align-items-center justify-content-center>
+            <img src="assets/imgs/placeholder.png" />
       <p>{{recd}}</p>
    
     </ion-card>
+    </ion-row>
     </ng-container>
     <div *ngIf="recd">
         <ion-img src="{{recd.image}}" style="width:50px;height:50px;"></ion-img>
@@ -29,10 +30,5 @@
     <div  text-center>
         <button ion-button (click) = "add_device()">Add Devices</button>
       </div>
-    <ion-footer>
-         <div class="button-bottom" text-center>
-          <button ion-button small round outline (click) = "logout()">LogOut</button>
-        </div>
-    </ion-footer> 
   </ion-content>
   

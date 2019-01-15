@@ -16,11 +16,12 @@
       <p>{{recd}}</p>
    
     </ion-card>
-    <ion-card *ngIf="recd">
-        <ion-img src="{{recd.image}}" style="width:1000px;height:100px;"></ion-img>
-     {{recd.name}}
-      </ion-card>
     </ng-container>
+    <div *ngIf="recd">
+        <ion-img src="{{recd.image}}" style="width:50px;height:50px;"></ion-img>
+     <p>{{recd.name}}</p>
+     <button ion-button (click) = "Feed()">Access Device</button>
+    </div>
     <div  text-center>
         <button ion-button (click) = "add_device()">Add Devices</button>
       </div>

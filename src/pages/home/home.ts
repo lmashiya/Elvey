@@ -36,4 +36,8 @@ export class HomePage {
   add_device(){
     this.navCtrl.push(DevicesPage);
   }
+  Feed()
+  {
+    
+  }
 }

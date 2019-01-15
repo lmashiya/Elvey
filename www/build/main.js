@@ -106,11 +106,12 @@ var CameralistPage = /** @class */ (function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */], { 'data': item });
     };
+    var _a, _b;
     CameralistPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-cameralist',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/cameralist/cameralist.html"*/'<!--\n  Generated template for the CameralistPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButtonCamera()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center class="tester">\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">HD Analogue Cameras</div>\n\n  <ion-list *ngFor="let item of items" no-lines text-center >\n    \n      <ion-item class = "texter">\n          <ion-img src="{{item.image}}" style="width:50px;height:50px;"></ion-img>\n          <p>{{ item.name }}</p>\n          <button ion-button outline item-end (click) = "goToHome(item)">Add Device</button>\n        </ion-item>\n  </ion-list>\n  </ion-content>\n  \n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/cameralist/cameralist.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" ? _a : Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" ? _b : Object])
     ], CameralistPage);
     return CameralistPage;
 }());
@@ -397,6 +398,31 @@ var CameralistipPage = /** @class */ (function () {
     function CameralistipPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.items = [
+            { image: 'assets/imgs/2MP IR Mini-Bullet Network Camera.jpg', name: '2MP IR Mini-Bullet Network Camera' },
+            { image: 'assets/imgs/2MP WDR IR Dome Network Vandal Dome Camera.jpg', name: '2MP WDR IR Dome Network Vandal Dome Camera' },
+            { image: 'assets/imgs/4MP WDR IR Eyeball Network Camera.jpg', name: '4MP WDR IR Eyeball Network Camera' },
+            { image: 'assets/imgs/4MP Motorized WDR IR Eyeball Network Camera.jpg', name: '4MP Motorized WDR IR Eyeball Network Camera' },
+            { image: 'assets/imgs/2MP Starlight IR Eyeball Network Camera With Audio.jpg', name: '2MP Starlight IR Eyeball Network Camera With Audio' },
+            { image: 'assets/imgs/2MP Starlight IR Eyeball Network Camera With Audio.jpg', name: '4MP IR Eyeball Network Camera With Audio' },
+            { image: 'assets/imgs/2MP WDR IR Mini Bullet Network Camera.jpg', name: '2MP WDR IR Mini Bullet Network Camera' },
+            { image: 'assets/imgs/2MP IR Eyeball Network Camera.png', name: '2MP IR Eyeball Network Camera' },
+            { image: 'assets/imgs/2MP Motorized IR Eyeball Network Camera.jpg', name: '2MP Motorized IR Eyeball Network Camera' },
+            { image: 'assets/imgs/2MP 30x Starlight IR PTZ Network Camera.jpg', name: '2MP 30x Starlight IR PTZ Network Camera' },
+            { image: 'assets/imgs/4MP 30x IR PTZ Network Camera.jpg', name: '14MP 30x IR PTZ Network Camera' },
+            { image: 'assets/imgs/2MP 20x IR PTZ Network Camera.jpg', name: '2MP 20x IR PTZ Network Camera' },
+            { image: 'assets/imgs/2MP 20x IR PTZ Network Camera.jpg', name: '4MP 20x IR PTZ Network Camera' },
+            { image: 'assets/imgs/4MP IR Eyeball Network Camera.jpg', name: '4MP IR Eyeball Network Camera' },
+            { image: 'assets/imgs/4MP IR Eyeball Network Camera.jpg', name: '2MP IR Eyeball Network Camera' },
+            { image: 'assets/imgs/4MP IR Vandal Dome Network Camera.jpg', name: '4MP IR Vandal Dome Network Camera' },
+            { image: 'assets/imgs/4MP IR Vandal Dome Network Camera.jpg', name: '2MP IR Vandal Dome Network Camera' },
+            { image: 'assets/imgs/2MP Fixed IR Bullet Network Camera.jpg', name: '2MP Fixed IR Bullet Network Camera' },
+            { image: 'assets/imgs/2MP Fixed IR Bullet Network Camera.jpg', name: '4MP Fixed IR Bullet Network Camera' },
+            { image: 'assets/imgs/2MP Motorized IR Bullet Network Camera.jpg', name: '2MP Motorized IR Bullet Network Camera' },
+            { image: 'assets/imgs/2MP Motorized IR Bullet Network Camera.jpg', name: '4MP Motorized IR Bullet Network Camera' },
+        ];
+        //this.navCtrl.push(HomePage, {'data': this.items});
+        console.log(this.items);
     }
     CameralistipPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad CameralistipPage');
@@ -404,15 +430,16 @@ var CameralistipPage = /** @class */ (function () {
     CameralistipPage.prototype.BackButton = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__camera_camera__["a" /* CameraPage */]);
     };
-    CameralistipPage.prototype.goToHome = function () {
+    CameralistipPage.prototype.goToHome = function (item) {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
-        console.log("I am in IP List");
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */], { 'data': item });
     };
+    var _a, _b;
     CameralistipPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cameralistip',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/cameralistip/cameralistip.html"*/'<!--\n  Generated template for the CameralistipPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButton()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">IP Cameras</div>\n\n  <ion-list no-lines text-center>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP IR Mini-Bullet Network Camera.jpg" alt="">\n      2MP IR Mini-Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP WDR IR Dome Network Vandal Dome Camera.jpg" alt="">\n      2MP WDR IR Dome Network Vandal Dome Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP WDR IR Eyeball Network Camera.jpg" alt="">\n      4MP WDR IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP Motorized WDR IR Eyeball Network Camera.jpg" alt="">\n      4MP Motorized WDR IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Starlight IR Eyeball Network Camera With Audio.jpg" alt="">\n      2MP Starlight IR Eyeball Network Camera With Audio.jpg\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Starlight IR Eyeball Network Camera With Audio.jpg" alt="">\n      4MP IR Eyeball Network Camera With Audio\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP WDR IR Mini Bullet Network Camera.jpg" alt="">\n      2MP WDR IR Mini Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP IR Eyeball Network Camera.png" alt="">\n      2MP IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Motorized IR Eyeball Network Camera.jpg" alt="">\n      2MP Motorized IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP 30x Starlight IR PTZ Network Camera.jpg" alt="">\n      2MP 30x Starlight IR PTZ Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP 30x IR PTZ Network Camera.jpg" alt="">\n      4MP 30x IR PTZ Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP 20x IR PTZ Network Camera.jpg" alt="">\n      2MP 20x IR PTZ Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP 20x IR PTZ Network Camera.jpg" alt="">\n      4MP 20x IR PTZ Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP IR Eyeball Network Camera.jpg" alt="">\n      4MP IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP IR Eyeball Network Camera.jpg" alt="">\n      2MP IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP IR Vandal Dome Network Camera.jpg" alt="">\n      4MP IR Vandal Dome Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP IR Vandal Dome Network Camera.jpg" alt="">\n      2MP IR Vandal Dome Network Camera.jpg\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Fixed IR Bullet Network Camera.jpg" alt="">\n      2MP Fixed IR Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Fixed IR Bullet Network Camera.jpg" alt="">\n      4MP Fixed IR Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Motorized IR Bullet Network Camera.jpg" alt="">\n      2MP Motorized IR Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Motorized IR Bullet Network Camera.jpg" alt="">\n      4MP Motorized IR Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n  </ion-list>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/cameralistip/cameralistip.html"*/,
+            selector: 'page-cameralistip',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/cameralistip/cameralistip.html"*/'<!--\n  Generated template for the CameralistipPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButton()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">IP Cameras</div>\n\n  <ion-list *ngFor="let item of items" no-lines text-center >\n    \n      <ion-item class = "texter">\n          <ion-img src="{{item.image}}" style="width:50px;height:50px;"></ion-img>\n          <p>{{ item.name }}</p>\n          <button ion-button outline item-end (click) = "goToHome(item)">Add Device</button>\n        </ion-item>\n  </ion-list>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/cameralistip/cameralistip.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" ? _a : Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" ? _b : Object])
     ], CameralistipPage);
     return CameralistipPage;
 }());
@@ -551,19 +578,19 @@ var map = {
 		8
 	],
 	"../pages/cameralist/cameralist.module": [
-		573,
+		569,
 		7
 	],
 	"../pages/cameralistip/cameralistip.module": [
-		571,
+		574,
 		6
 	],
 	"../pages/devices/devices.module": [
-		569,
+		570,
 		5
 	],
 	"../pages/fire/fire.module": [
-		570,
+		571,
 		4
 	],
 	"../pages/intrusion/intrusion.module": [
@@ -575,7 +602,7 @@ var map = {
 		2
 	],
 	"../pages/resetpassword/resetpassword.module": [
-		574,
+		573,
 		1
 	],
 	"../pages/signup/signup.module": [
@@ -844,12 +871,12 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/access/access.module#AccessPageModule', name: 'AccessPage', segment: 'access', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/camera/camera.module#CameraPageModule', name: 'CameraPage', segment: 'camera', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cameralist/cameralist.module#CameralistPageModule', name: 'CameralistPage', segment: 'cameralist', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/devices/devices.module#DevicesPageModule', name: 'DevicesPage', segment: 'devices', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/fire/fire.module#FirePageModule', name: 'FirePage', segment: 'fire', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cameralistip/cameralistip.module#CameralistipPageModule', name: 'CameralistipPage', segment: 'cameralistip', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/intrusion/intrusion.module#IntrusionPageModule', name: 'IntrusionPage', segment: 'intrusion', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cameralist/cameralist.module#CameralistPageModule', name: 'CameralistPage', segment: 'cameralist', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/resetpassword/resetpassword.module#ResetpasswordPageModule', name: 'ResetpasswordPage', segment: 'resetpassword', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cameralistip/cameralistip.module#CameralistipPageModule', name: 'CameralistipPage', segment: 'cameralistip', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
                     ]
@@ -1060,11 +1087,14 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.add_device = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__devices_devices__["a" /* DevicesPage */]);
     };
+    HomePage.prototype.Feed = function () {
+    };
+    var _a, _b, _c, _d, _e;
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/home/home.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n      <ion-title text-center>\n        Home\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">WELCOME</div>\n<ng-container text-center>\n  <ion-card>\n      <img src="assets/imgs/placeholder.png" height=\'150\' width=\'80\'/>\n      <!-- <p>Name: {{recd}}</p> -->\n      <p>{{recd}}</p>\n   \n    </ion-card>\n    <ion-card *ngIf="recd">\n        <ion-img src="{{recd.image}}" style="width:1000px;height:100px;"></ion-img>\n     {{recd.name}}\n      </ion-card>\n    </ng-container>\n    <div  text-center>\n        <button ion-button (click) = "add_device()">Add Devices</button>\n      </div>\n    <ion-footer>\n         <div class="button-bottom" text-center>\n          <button ion-button small round outline (click) = "logout()">LogOut</button>\n        </div>\n    </ion-footer> \n  </ion-content>\n  '/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/home/home.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n      <ion-title text-center>\n        Home\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">WELCOME</div>\n<ng-container text-center>\n  <ion-card>\n      <img src="assets/imgs/placeholder.png" height=\'150\' width=\'80\'/>\n      <!-- <p>Name: {{recd}}</p> -->\n      <p>{{recd}}</p>\n   \n    </ion-card>\n    </ng-container>\n    <div *ngIf="recd">\n        <ion-img src="{{recd.image}}" style="width:50px;height:50px;"></ion-img>\n     <p>{{recd.name}}</p>\n     <button ion-button (click) = "Feed()">Access Device</button>\n    </div>\n    <div  text-center>\n        <button ion-button (click) = "add_device()">Add Devices</button>\n      </div>\n    <ion-footer>\n         <div class="button-bottom" text-center>\n          <button ion-button small round outline (click) = "logout()">LogOut</button>\n        </div>\n    </ion-footer> \n  </ion-content>\n  '/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */]) === "function" ? _a : Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" ? _b : Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" ? _c : Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]) === "function" ? _d : Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */]) === "function" ? _e : Object])
     ], HomePage);
     return HomePage;
 }());

@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DevicesPage } from '../devices/devices';
 import {CameralistPage} from '../cameralist/cameralist';
 import {CameralistipPage} from '../cameralistip/cameralistip';
+import { ToastController } from 'ionic-angular';
+import {App} from 'ionic-angular';
 
 
 /**
@@ -19,7 +21,7 @@ import {CameralistipPage} from '../cameralistip/cameralistip';
 })
 export class CameraPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toast: ToastController, public app: App) {
   }
 
   ionViewDidLoad() {

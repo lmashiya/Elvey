@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CameraPage } from '../camera/camera';
+import { HomePage } from '../home/home';
 /**
  * Generated class for the CameralistipPage page.
  *
@@ -20,6 +21,15 @@ export class CameralistipPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CameralistipPage');
+  }
+  BackButton()
+  {
+    this.navCtrl.push(CameraPage)
+  }
+  goToHome()
+  {
+    this.navCtrl.push(HomePage)
+    console.log("I am in IP List")
   }
 
 }

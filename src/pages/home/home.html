@@ -12,10 +12,14 @@
 <ng-container text-center>
   <ion-card>
       <img src="assets/imgs/placeholder.png" height='150' width='80'/>
-      <p>Name: </p>
-      <p>Email: </p>
+      <!-- <p>Name: {{recd}}</p> -->
+      <p>{{recd}}</p>
    
     </ion-card>
+    <ion-card *ngIf="recd">
+        <ion-img src="{{recd.image}}" style="width:1000px;height:100px;"></ion-img>
+     {{recd.name}}
+      </ion-card>
     </ng-container>
     <div  text-center>
         <button ion-button (click) = "add_device()">Add Devices</button>

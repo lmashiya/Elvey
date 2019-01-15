@@ -64,7 +64,7 @@ export class LoginPage {
                             position: 'top',
                             cssClass: 'texter'
                           }).present();
-                          this.navCtrl.push(HomePage, {'data': this.user});
+                          this.navCtrl.push(HomePage, {'data': data});
                           this.navCtrl.setRoot(TabsPage);
                       }
                      

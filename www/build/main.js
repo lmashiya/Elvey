@@ -1,127 +1,5 @@
 webpackJsonp([10],{
 
-/***/ 100:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__devices_devices__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(62);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var HomePage = /** @class */ (function () {
-    function HomePage(fire, navCtrl, navParams, toast, app) {
-        this.fire = fire;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.toast = toast;
-        this.app = app;
-        this.recd = "";
-        //receiving data from LoginPage
-        this.recd = this.navParams.get('data');
-        console.log(this.recd);
-    }
-    HomePage.prototype.logout = function () {
-        this.toast.create({
-            message: 'Logout successful!',
-            duration: 3000,
-            position: 'top'
-        }).present();
-        this.app.getRootNav().setRoot(__WEBPACK_IMPORTED_MODULE_4__login_login__["a" /* LoginPage */]);
-    };
-    HomePage.prototype.add_device = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__devices_devices__["a" /* DevicesPage */]);
-    };
-    HomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/home/home.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n      <ion-title text-center>\n        Home\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">WELCOME</div>\n<ng-container text-center>\n  <ion-card>\n      <img src="assets/imgs/placeholder.png" height=\'150\' width=\'80\'/>\n      <p>Name: </p>\n      <p>Email: </p>\n   \n    </ion-card>\n    </ng-container>\n    <div  text-center>\n        <button ion-button (click) = "add_device()">Add Devices</button>\n      </div>\n    <ion-footer>\n         <div class="button-bottom" text-center>\n          <button ion-button small round outline (click) = "logout()">LogOut</button>\n        </div>\n    </ion-footer> \n  </ion-content>\n  '/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/home/home.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */]])
-    ], HomePage);
-    return HomePage;
-}());
-
-//# sourceMappingURL=home.js.map
-
-/***/ }),
-
-/***/ 110:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CameraPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__devices_devices__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__cameralist_cameralist__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cameralistip_cameralistip__ = __webpack_require__(191);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the CameraPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var CameraPage = /** @class */ (function () {
-    function CameraPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    CameraPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CameraPage');
-    };
-    CameraPage.prototype.BackButton = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__devices_devices__["a" /* DevicesPage */]);
-    };
-    CameraPage.prototype.goToCameraList = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__cameralist_cameralist__["a" /* CameralistPage */]);
-    };
-    CameraPage.prototype.goToCameraListIp = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cameralistip_cameralistip__["a" /* CameralistipPage */]);
-    };
-    CameraPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-camera',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/camera/camera.html"*/'\n<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButton()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">CCTV/SURVEILLANCE</div>\n\n  <ion-list no-lines text-center>\n    <ion-item class = "texter">\n      HD Analogue Cameras\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      IP Cameras\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/camera/camera.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-    ], CameraPage);
-    return CameraPage;
-}());
-
-//# sourceMappingURL=camera.js.map
-
-/***/ }),
-
 /***/ 189:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -161,7 +39,7 @@ var AccessPage = /** @class */ (function () {
     };
     AccessPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-access',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/access/access.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButton()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n   <ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">ACCESS CONTROL</div>\n\n  <ion-list no-lines text-center>\n        <ion-item class = "texter">\n          Boom Gates\n          <button ion-button outline item-end (click) = "goToDetection()">Add Device</button>\n        </ion-item>\n        <ion-item class = "texter">\n        Door Closers\n          <button ion-button outline item-end (click) = "goToAccess()">Add Device</button>\n        </ion-item>\n        <ion-item class = "texter">\n         Intercoms\n          <button ion-button outline item-end (click) = "goToDetection()">Add Device</button>\n        </ion-item>\n            <ion-item class = "texter">\n         Remotes and Receivers\n          <button ion-button outline item-end (click) = "goToCamera()">Add Device</button>\n        </ion-item>\n        <ion-item class = "texter">\n         Gate Motors and Accessories\n          <button ion-button outline item-end (click) = "goToFire()">Add Device</button>\n        </ion-item>\n        <ion-item class = "texter">\n          Request to Exit Buttons & Manual Call Points\n          <button ion-button outline item-end (click) = "goToFire()">Add Device</button>\n        </ion-item>\n      </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/access/access.html"*/,
+            selector: 'page-access',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/access/access.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButton()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n   <ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">ACCESS CONTROL</div>\n\n  <ion-list no-lines text-center>\n        <ion-item class = "texter">\n          Boom Gates\n          <button ion-button outline item-end (click) = "goToDetection()">Add Device</button>\n        </ion-item>\n        <ion-item class = "texter">\n        Door Closers\n          <button ion-button outline item-end (click) = "goToAccess()">Add Device</button>\n        </ion-item>\n        <ion-item class = "texter">\n         Intercoms\n          <button ion-button outline item-end (click) = "goToDetection()">Add Device</button>\n        </ion-item>\n            <ion-item class = "texter">\n         Remotes and Receivers\n          <button ion-button outline item-end (click) = "goToCamera()">Add Device</button>\n        </ion-item>\n        <ion-item class = "texter">\n         Gate Motors and Accessories\n          <button ion-button outline item-end (click) = "goToFire()">Add Device</button>\n        </ion-item>\n        <ion-item class = "texter">\n          Request to Exit Buttons & Manual Call Points\n          <button ion-button outline item-end (click) = "goToFire()">Add Device</button>\n        </ion-item>\n      </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/access/access.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], AccessPage);
@@ -179,7 +57,8 @@ var AccessPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CameralistPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__camera_camera__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__camera_camera__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(59);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -189,6 +68,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -202,6 +82,19 @@ var CameralistPage = /** @class */ (function () {
     function CameralistPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.items = [
+            { image: 'assets/imgs/starlight_resized.jpg', name: '2MP 25x Starlight IR PTZ HDCVI Camera' },
+            { image: 'assets/imgs/vari_focal.png', name: '2MP Vari-Focal HDCVI IR Vandal Dome Camera' },
+            { image: 'assets/imgs/plastic_indoor.jpg', name: '1MP Plastic Indoor IR Eyeball Camera' },
+            { image: 'assets/imgs/metal_ir.jpg', name: '1MP Metal IR Eyeball Camera' },
+            { image: 'assets/imgs/eyeball.jpg', name: '1MP IR Eyeball Camera With Audio' },
+            { image: 'assets/imgs/1MP Vari-Focal IR Eyeball Camera.jpg', name: ' 1MP Vari-Focal IR Eyeball Camera' },
+            { image: 'assets/imgs/2MP Metal IR Eyeball Camera.jpg', name: '2MP Metal IR Eyeball Camera' },
+            { image: 'assets/imgs/2MP 30x Starlight IR PTZ HDCVI Camera.jpg', name: '2MP 30x Starlight IR PTZ HDCVI Camera' },
+            { image: 'assets/imgs/2MP Starlight HDCVI Pinhole Camera.jpg', name: '2MP Starlight HDCVI Pinhole Camera' },
+            { image: 'assets/imgs/2MP HDCVI PIR Camera.jpg', name: '2MP HDCVI PIR Camera' }
+        ];
+        console.log(this.items);
     }
     CameralistPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad CameralistPage');
@@ -209,11 +102,17 @@ var CameralistPage = /** @class */ (function () {
     CameralistPage.prototype.BackButtonCamera = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__camera_camera__["a" /* CameraPage */]);
     };
+    CameralistPage.prototype.goToHome = function (item) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */], { 'data': item });
+        console.log("I am in camera List");
+    };
+    var _a, _b;
     CameralistPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cameralist',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/cameralist/cameralist.html"*/'<!--\n  Generated template for the CameralistPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButtonCamera()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center class="tester">\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">HD Analogue Cameras</div>\n\n  <ion-list no-lines text-center>\n    <ion-item class = "texter">\n      <img src="assets/imgs/starlight_resized.jpg" alt="">\n      2MP 25x Starlight IR PTZ HDCVI Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/vari_focal.png" alt="">\n      2MP Vari-Focal HDCVI IR Vandal Dome Camera\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/plastic_indoor.jpg" alt="">\n      1MP Plastic Indoor IR Eyeball Camera\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/metal_ir.jpg" alt="">\n      1MP Metal IR Eyeball Camera\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/eyeball.jpg" alt="">\n      1MP IR Eyeball Camera With Audio\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/1MP Vari-Focal IR Eyeball Camera.jpg" alt="">\n      1MP Vari-Focal IR Eyeball Camera.\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Metal IR Eyeball Camera.jpg" alt="">\n      2MP Metal IR Eyeball Camera\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP 30x Starlight IR PTZ HDCVI Camera.jpg" alt="">\n      2MP 30x Starlight IR PTZ HDCVI Camera\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Starlight HDCVI Pinhole Camera.jpg" alt="">\n      2MP Starlight HDCVI Pinhole Camera.jpg\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP HDCVI PIR Camera.jpg" alt="">\n      2MP HDCVI PIR Camera\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/1MP Pastic IR Bullet Camera.jpg" alt="">\n      1MP Pastic IR Bullet Camera\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/1MP Metal IR Bullet Camera.jpg" alt="">\n      1MP Metal IR Bullet Camera\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/1MP Vari-Focal IR Bullet Camera.jpg" alt="">\n      1MP Vari-Focal IR Bullet Camera\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Metal IR Bullet Camera.jpg" alt="">\n      2MP Metal IR Bullet Camera\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Starlight Motorized IR Bullet Camera.jpg" alt="">\n      2MP Starlight Motorized IR Bullet Camera.jpg\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n  </ion-list>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/cameralist/cameralist.html"*/,
+            selector: 'page-cameralist',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/cameralist/cameralist.html"*/'<!--\n  Generated template for the CameralistPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButtonCamera()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center class="tester">\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">HD Analogue Cameras</div>\n\n  <ion-list *ngFor="let item of items" no-lines text-center >\n    \n      <ion-item class = "texter">\n          <ion-img src="{{item.image}}" style="width:50px;height:50px;"></ion-img>\n          <p>{{ item.name }}</p>\n          <button ion-button outline item-end (click) = "goToHome(item)">Add Device</button>\n        </ion-item>\n  </ion-list>\n  </ion-content>\n  \n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/cameralist/cameralist.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" ? _a : Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" ? _b : Object])
     ], CameralistPage);
     return CameralistPage;
 }());
@@ -226,158 +125,13 @@ var CameralistPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CameralistipPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the CameralistipPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var CameralistipPage = /** @class */ (function () {
-    function CameralistipPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    CameralistipPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CameralistipPage');
-    };
-    CameralistipPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cameralistip',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/cameralistip/cameralistip.html"*/'<!--\n  Generated template for the CameralistipPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButton()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">IP Cameras</div>\n\n  <ion-list no-lines text-center>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP IR Mini-Bullet Network Camera.jpg" alt="">\n      2MP IR Mini-Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP WDR IR Dome Network Vandal Dome Camera.jpg" alt="">\n      2MP WDR IR Dome Network Vandal Dome Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP WDR IR Eyeball Network Camera.jpg" alt="">\n      4MP WDR IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP Motorized WDR IR Eyeball Network Camera.jpg" alt="">\n      4MP Motorized WDR IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Starlight IR Eyeball Network Camera With Audio.jpg" alt="">\n      2MP Starlight IR Eyeball Network Camera With Audio.jpg\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Starlight IR Eyeball Network Camera With Audio.jpg" alt="">\n      4MP IR Eyeball Network Camera With Audio\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP WDR IR Mini Bullet Network Camera.jpg" alt="">\n      2MP WDR IR Mini Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP IR Eyeball Network Camera.png" alt="">\n      2MP IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Motorized IR Eyeball Network Camera.jpg" alt="">\n      2MP Motorized IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP 30x Starlight IR PTZ Network Camera.jpg" alt="">\n      2MP 30x Starlight IR PTZ Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP 30x IR PTZ Network Camera.jpg" alt="">\n      4MP 30x IR PTZ Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP 20x IR PTZ Network Camera.jpg" alt="">\n      2MP 20x IR PTZ Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP 20x IR PTZ Network Camera.jpg" alt="">\n      4MP 20x IR PTZ Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP IR Eyeball Network Camera.jpg" alt="">\n      4MP IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP IR Eyeball Network Camera.jpg" alt="">\n      2MP IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP IR Vandal Dome Network Camera.jpg" alt="">\n      4MP IR Vandal Dome Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP IR Vandal Dome Network Camera.jpg" alt="">\n      2MP IR Vandal Dome Network Camera.jpg\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Fixed IR Bullet Network Camera.jpg" alt="">\n      2MP Fixed IR Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Fixed IR Bullet Network Camera.jpg" alt="">\n      4MP Fixed IR Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Motorized IR Bullet Network Camera.jpg" alt="">\n      2MP Motorized IR Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Motorized IR Bullet Network Camera.jpg" alt="">\n      4MP Motorized IR Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n  </ion-list>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/cameralistip/cameralistip.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-    ], CameralistipPage);
-    return CameralistipPage;
-}());
-
-//# sourceMappingURL=cameralistip.js.map
-
-/***/ }),
-
-/***/ 192:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IntrusionPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__devices_devices__ = __webpack_require__(52);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the IntrusionPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var IntrusionPage = /** @class */ (function () {
-    function IntrusionPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    IntrusionPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad IntrusionPage');
-    };
-    IntrusionPage.prototype.BackButton = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__devices_devices__["a" /* DevicesPage */]);
-    };
-    IntrusionPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-intrusion',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/intrusion/intrusion.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButton()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">INTRUSION DETECTION</div>\n  <ion-list no-lines text-center>\n        <ion-item class = "texter">\n              Detectors\n              <button ion-button outline item-end (click) = "goToFire()">Add Device</button>\n            </ion-item>\n          </ion-list>\n\n\n</ion-content>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/intrusion/intrusion.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-    ], IntrusionPage);
-    return IntrusionPage;
-}());
-
-//# sourceMappingURL=intrusion.js.map
-
-/***/ }),
-
-/***/ 193:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FirePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__devices_devices__ = __webpack_require__(52);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the FirePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var FirePage = /** @class */ (function () {
-    function FirePage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    FirePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad FirePage');
-    };
-    FirePage.prototype.BackButton = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__devices_devices__["a" /* DevicesPage */]);
-    };
-    FirePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-fire',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/fire/fire.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButton()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">FIRE INTRUSION</div>\n  <ion-list no-lines text-center>\n  <ion-item class = "texter">\n        Detectors\n        <button ion-button outline item-end (click) = "goToCamera()">Add Device</button>\n      </ion-item>\n    </ion-list>\n\n\n</ion-content>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/fire/fire.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-    ], FirePage);
-    return FirePage;
-}());
-
-//# sourceMappingURL=fire.js.map
-
-/***/ }),
-
-/***/ 194:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase_app__ = __webpack_require__(150);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_firebase_app__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(63);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -518,7 +272,7 @@ var SignupPage = /** @class */ (function () {
     ], SignupPage.prototype, "navBar", void 0);
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-header>\n  <ion-navbar hideBackButton>\n     <ion-buttons left>\n         <button ion-button (click)="BackButton()">\n             <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n         </button>\n     </ion-buttons>\n  </ion-navbar>\n </ion-header>\n\n<ion-content padding text-center>\n\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <h1>"Security is everyone\'s concern...but it\'s our business!"</h1>\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating text-center>Email</ion-label>\n      <ion-input type="text" [(ngModel)] = "user.email"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating text-center>Password(enter at least 6 characters)</ion-label>\n      <ion-input\n     [(ngModel)]="user.password"\n      name="password"\n      type="password"\n      #password="ngModel"\n      [minlength]="6"\n      required>\n    </ion-input>\n    </ion-item>\n    <div class="signupButton" text-center>\n      <button ion-button round outline (click) = "signup(user)">Signup</button>\n    </div>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/signup/signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-header>\n  <ion-navbar hideBackButton>\n     <ion-buttons left>\n         <button ion-button (click)="BackButton()">\n             <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n         </button>\n     </ion-buttons>\n  </ion-navbar>\n </ion-header>\n\n<ion-content padding text-center>\n\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <h1>"Security is everyone\'s concern...but it\'s our business!"</h1>\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating text-center>Email</ion-label>\n      <ion-input type="text" [(ngModel)] = "user.email"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating text-center>Password(enter at least 6 characters)</ion-label>\n      <ion-input\n     [(ngModel)]="user.password"\n      name="password"\n      type="password"\n      #password="ngModel"\n      [minlength]="6"\n      required>\n    </ion-input>\n    </ion-item>\n    <div class="signupButton" text-center>\n      <button ion-button round outline (click) = "signup(user)">Signup</button>\n    </div>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/signup/signup.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
     ], SignupPage);
@@ -529,15 +283,15 @@ var SignupPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 195:
+/***/ 192:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResetpasswordPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(63);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -602,7 +356,7 @@ var ResetpasswordPage = /** @class */ (function () {
     };
     ResetpasswordPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-resetpassword',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/resetpassword/resetpassword.html"*/'<!--\n  Generated template for the ResetpasswordPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content text-center padding>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating text-center>Email</ion-label>\n      <ion-input type="text" [(ngModel)] = "user.email"></ion-input>\n    </ion-item>\n\n    <div class="resetButton" text-center>\n      <button ion-button round outline (click) = "resetpass()">Reset Password</button>\n    </div>\n\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/resetpassword/resetpassword.html"*/,
+            selector: 'page-resetpassword',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/resetpassword/resetpassword.html"*/'<!--\n  Generated template for the ResetpasswordPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content text-center padding>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating text-center>Email</ion-label>\n      <ion-input type="text" [(ngModel)] = "user.email"></ion-input>\n    </ion-item>\n\n    <div class="resetButton" text-center>\n      <button ion-button round outline (click) = "resetpass()">Reset Password</button>\n    </div>\n\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/resetpassword/resetpassword.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
     ], ResetpasswordPage);
@@ -610,6 +364,162 @@ var ResetpasswordPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=resetpassword.js.map
+
+/***/ }),
+
+/***/ 193:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CameralistipPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__camera_camera__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(59);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the CameralistipPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var CameralistipPage = /** @class */ (function () {
+    function CameralistipPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    CameralistipPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CameralistipPage');
+    };
+    CameralistipPage.prototype.BackButton = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__camera_camera__["a" /* CameraPage */]);
+    };
+    CameralistipPage.prototype.goToHome = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
+        console.log("I am in IP List");
+    };
+    CameralistipPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-cameralistip',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/cameralistip/cameralistip.html"*/'<!--\n  Generated template for the CameralistipPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButton()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">IP Cameras</div>\n\n  <ion-list no-lines text-center>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP IR Mini-Bullet Network Camera.jpg" alt="">\n      2MP IR Mini-Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP WDR IR Dome Network Vandal Dome Camera.jpg" alt="">\n      2MP WDR IR Dome Network Vandal Dome Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP WDR IR Eyeball Network Camera.jpg" alt="">\n      4MP WDR IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP Motorized WDR IR Eyeball Network Camera.jpg" alt="">\n      4MP Motorized WDR IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Starlight IR Eyeball Network Camera With Audio.jpg" alt="">\n      2MP Starlight IR Eyeball Network Camera With Audio.jpg\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Starlight IR Eyeball Network Camera With Audio.jpg" alt="">\n      4MP IR Eyeball Network Camera With Audio\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP WDR IR Mini Bullet Network Camera.jpg" alt="">\n      2MP WDR IR Mini Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP IR Eyeball Network Camera.png" alt="">\n      2MP IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Motorized IR Eyeball Network Camera.jpg" alt="">\n      2MP Motorized IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP 30x Starlight IR PTZ Network Camera.jpg" alt="">\n      2MP 30x Starlight IR PTZ Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP 30x IR PTZ Network Camera.jpg" alt="">\n      4MP 30x IR PTZ Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP 20x IR PTZ Network Camera.jpg" alt="">\n      2MP 20x IR PTZ Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP 20x IR PTZ Network Camera.jpg" alt="">\n      4MP 20x IR PTZ Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP IR Eyeball Network Camera.jpg" alt="">\n      4MP IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP IR Eyeball Network Camera.jpg" alt="">\n      2MP IR Eyeball Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP IR Vandal Dome Network Camera.jpg" alt="">\n      4MP IR Vandal Dome Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/4MP IR Vandal Dome Network Camera.jpg" alt="">\n      2MP IR Vandal Dome Network Camera.jpg\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Fixed IR Bullet Network Camera.jpg" alt="">\n      2MP Fixed IR Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Fixed IR Bullet Network Camera.jpg" alt="">\n      4MP Fixed IR Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Motorized IR Bullet Network Camera.jpg" alt="">\n      2MP Motorized IR Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      <img src="assets/imgs/2MP Motorized IR Bullet Network Camera.jpg" alt="">\n      4MP Motorized IR Bullet Network Camera\n      <button ion-button outline item-end (click) = "goToHome()">Add Device</button>\n    </ion-item>\n  </ion-list>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/cameralistip/cameralistip.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    ], CameralistipPage);
+    return CameralistipPage;
+}());
+
+//# sourceMappingURL=cameralistip.js.map
+
+/***/ }),
+
+/***/ 194:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IntrusionPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__devices_devices__ = __webpack_require__(52);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the IntrusionPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var IntrusionPage = /** @class */ (function () {
+    function IntrusionPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    IntrusionPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad IntrusionPage');
+    };
+    IntrusionPage.prototype.BackButton = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__devices_devices__["a" /* DevicesPage */]);
+    };
+    IntrusionPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-intrusion',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/intrusion/intrusion.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButton()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">INTRUSION DETECTION</div>\n  <ion-list no-lines text-center>\n        <ion-item class = "texter">\n              Detectors\n              <button ion-button outline item-end (click) = "goToFire()">Add Device</button>\n            </ion-item>\n          </ion-list>\n\n\n</ion-content>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/intrusion/intrusion.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    ], IntrusionPage);
+    return IntrusionPage;
+}());
+
+//# sourceMappingURL=intrusion.js.map
+
+/***/ }),
+
+/***/ 195:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FirePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__devices_devices__ = __webpack_require__(52);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the FirePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var FirePage = /** @class */ (function () {
+    function FirePage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    FirePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad FirePage');
+    };
+    FirePage.prototype.BackButton = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__devices_devices__["a" /* DevicesPage */]);
+    };
+    FirePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-fire',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/fire/fire.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButton()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">FIRE INTRUSION</div>\n  <ion-list no-lines text-center>\n  <ion-item class = "texter">\n        Detectors\n        <button ion-button outline item-end (click) = "goToCamera()">Add Device</button>\n      </ion-item>\n    </ion-list>\n\n\n</ion-content>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/fire/fire.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    ], FirePage);
+    return FirePage;
+}());
+
+//# sourceMappingURL=fire.js.map
 
 /***/ }),
 
@@ -643,35 +553,35 @@ var map = {
 		8
 	],
 	"../pages/cameralist/cameralist.module": [
-		569,
+		576,
 		7
 	],
 	"../pages/cameralistip/cameralistip.module": [
-		570,
+		575,
 		6
 	],
 	"../pages/devices/devices.module": [
-		571,
+		569,
 		5
 	],
 	"../pages/fire/fire.module": [
-		572,
+		570,
 		4
 	],
 	"../pages/intrusion/intrusion.module": [
-		573,
+		571,
 		3
 	],
 	"../pages/login/login.module": [
-		574,
+		572,
 		2
 	],
 	"../pages/resetpassword/resetpassword.module": [
-		575,
+		573,
 		1
 	],
 	"../pages/signup/signup.module": [
-		576,
+		574,
 		0
 	]
 };
@@ -699,7 +609,7 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_about__ = __webpack_require__(284);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(59);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -720,7 +630,7 @@ var TabsPage = /** @class */ (function () {
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/tabs/tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -755,7 +665,7 @@ var AboutPage = /** @class */ (function () {
     }
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>\n      About Elvey\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n<p class="texter">\n    Elvey Security Technologies was established in 1946 \n    and is proud to be one of the leading distributors of \n    electronic security equipment in Africa. Our vision is \n    to assist in the protection of people and property by \n    providing quality innovative products and solutions to \n    the electronic security industry, thereby ensuring a \n    safe and secure future for all.\n\n</p>\n<p class="texter"><b> Industry: </b></p>\n<p class="texter">Security and Investigations</p>\n<p class="texter"><b>Company size:</b></p>\n<p class="texter"> 201-500 employees</p>\n<p class="texter"><b>Headquarters:</b></p>\n<p class="texter">Johannesburg, Gauteng</p>\n<p class="texter"><b>Type:</b></p>\n<p class="texter"> Public Company</p>\n<p class="texter"><b>Founded:</b></p>\n<p class="texter">1946</p>\n<p class="texter"><b>Specialities:</b></p>\n<p class="texter">\n  Intruder Detection, Outdoor & Perimeter detectors, Wireless/ Hardwired \n  and Hybrid Alarm Systems, Alarm Communicators, \n  Control Room Equipment, Analog & IP Cameras, Access Control Equipment,\n   Digital Video Recorders, Network Video redcorders, and Fire Control panels.\n  </p>\n  <p class="texter">To find More about the company, please go the the contact Page and follow links provided.</p>\n  <p class="texter"><b><i>ELVEY<br />Prividing Complete Peace of Mind!</i></b></p>\n\n</ion-content>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/about/about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>\n      About Elvey\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n<p class="texter">\n    Elvey Security Technologies was established in 1946 \n    and is proud to be one of the leading distributors of \n    electronic security equipment in Africa. Our vision is \n    to assist in the protection of people and property by \n    providing quality innovative products and solutions to \n    the electronic security industry, thereby ensuring a \n    safe and secure future for all.\n\n</p>\n<p class="texter"><b> Industry: </b></p>\n<p class="texter">Security and Investigations</p>\n<p class="texter"><b>Company size:</b></p>\n<p class="texter"> 201-500 employees</p>\n<p class="texter"><b>Headquarters:</b></p>\n<p class="texter">Johannesburg, Gauteng</p>\n<p class="texter"><b>Type:</b></p>\n<p class="texter"> Public Company</p>\n<p class="texter"><b>Founded:</b></p>\n<p class="texter">1946</p>\n<p class="texter"><b>Specialities:</b></p>\n<p class="texter">\n  Intruder Detection, Outdoor & Perimeter detectors, Wireless/ Hardwired \n  and Hybrid Alarm Systems, Alarm Communicators, \n  Control Room Equipment, Analog & IP Cameras, Access Control Equipment,\n   Digital Video Recorders, Network Video redcorders, and Fire Control panels.\n  </p>\n  <p class="texter">To find More about the company, please go the the contact Page and follow links provided.</p>\n  <p class="texter"><b><i>ELVEY<br />Prividing Complete Peace of Mind!</i></b></p>\n\n</ion-content>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/about/about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
     ], AboutPage);
@@ -805,7 +715,7 @@ var ContactPage = /** @class */ (function () {
     };
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>\n      Contact Us\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="tester">\n  <ion-list>\n    <ion-list-header class="texter">Follow us on the following platforms:</ion-list-header>\n    <ion-item class="tester">\n      <ion-icon name="ionic" item-start></ion-icon>\n      <b class="texter">Our Official Website:</b>\n      <p><a href=\'#\' (click)="goToWebsite()">http://www.elvey.co.za</a></p>\n    </ion-item>\n    <ion-item class="tester">\n        <ion-icon name="ionic" item-start></ion-icon>\n        <b class="texter">Our Address:</b>\n        <p class="texter">27 GreenStone PI</p>\n        <p class="texter">Modderfontein</p>\n        <p class="texter">Lethabong</p>\n        <p class="texter">1609</p>\n      </ion-item>\n      <ion-item class="tester">\n          <ion-icon name="ionic" item-start></ion-icon>\n         <b class="texter">Or Contact Us On:</b>\n          <p class="texter">(011) 401 6700</p>\n        </ion-item>\n        <ion-item class="tester">\n            <ion-icon name="ionic" item-start></ion-icon>\n          <b class="texter">Follow us on:</b>\n\n          <p>\n              <ion-grid>\n                  <ion-row>\n                    <ion-col>\n                        <button ion-button clear (click)="goToTwitter()"><img src="assets/imgs/twt.png"></button>\n                      </ion-col>\n                      <ion-col>\n      \n                        <button ion-button clear (click)="goToFacebook()"><img src="assets/imgs/fbbtn.png"></button>\n                      </ion-col>\n                      <ion-col>\n                        <button ion-button clear (click)="goToLinkedIn()"><img src="assets/imgs/li.png"></button>\n                      </ion-col>\n                      <ion-col>\n                        <button ion-button clear (click)="goToYouTube()"> <img src="assets/imgs/ut.png"></button>\n                  </ion-col>\n                </ion-row>\n              </ion-grid>\n          </p>\n          </ion-item>\n          \n          \n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/contact/contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>\n      Contact Us\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="tester">\n  <ion-list>\n    <ion-list-header class="texter">Follow us on the following platforms:</ion-list-header>\n    <ion-item class="tester">\n      <ion-icon name="ionic" item-start></ion-icon>\n      <b class="texter">Our Official Website:</b>\n      <p><a href=\'#\' (click)="goToWebsite()">http://www.elvey.co.za</a></p>\n    </ion-item>\n    <ion-item class="tester">\n        <ion-icon name="ionic" item-start></ion-icon>\n        <b class="texter">Our Address:</b>\n        <p class="texter">27 GreenStone PI</p>\n        <p class="texter">Modderfontein</p>\n        <p class="texter">Lethabong</p>\n        <p class="texter">1609</p>\n      </ion-item>\n      <ion-item class="tester">\n          <ion-icon name="ionic" item-start></ion-icon>\n         <b class="texter">Or Contact Us On:</b>\n          <p class="texter">(011) 401 6700</p>\n        </ion-item>\n        <ion-item class="tester">\n            <ion-icon name="ionic" item-start></ion-icon>\n          <b class="texter">Follow us on:</b>\n\n          <p>\n              <ion-grid>\n                  <ion-row>\n                    <ion-col>\n                        <button ion-button clear (click)="goToTwitter()"><img src="assets/imgs/twt.png"></button>\n                      </ion-col>\n                      <ion-col>\n      \n                        <button ion-button clear (click)="goToFacebook()"><img src="assets/imgs/fbbtn.png"></button>\n                      </ion-col>\n                      <ion-col>\n                        <button ion-button clear (click)="goToLinkedIn()"><img src="assets/imgs/li.png"></button>\n                      </ion-col>\n                      <ion-col>\n                        <button ion-button clear (click)="goToYouTube()"> <img src="assets/imgs/ut.png"></button>\n                  </ion-col>\n                </ion-row>\n              </ion-grid>\n          </p>\n          </ion-item>\n          \n          \n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/contact/contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
     ], ContactPage);
@@ -839,25 +749,25 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(540);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_fire_auth__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_fire_auth__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_fire__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_signup_signup__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_signup_signup__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_about_about__ = __webpack_require__(284);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_contact_contact__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_tabs_tabs__ = __webpack_require__(283);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_geolocation__ = __webpack_require__(560);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_native_geocoder__ = __webpack_require__(561);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_device__ = __webpack_require__(562);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_resetpassword_resetpassword__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_resetpassword_resetpassword__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_devices_devices__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_camera_camera__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_fire_fire__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_camera_camera__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_fire_fire__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_access_access__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_intrusion_intrusion__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_intrusion_intrusion__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_cameralist_cameralist__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_cameralistip_cameralistip__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_cameralistip_cameralistip__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_file__ = __webpack_require__(563);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__ionic_native_transfer__ = __webpack_require__(564);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_file_path__ = __webpack_require__(565);
@@ -936,14 +846,14 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/access/access.module#AccessPageModule', name: 'AccessPage', segment: 'access', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/camera/camera.module#CameraPageModule', name: 'CameraPage', segment: 'camera', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cameralist/cameralist.module#CameralistPageModule', name: 'CameralistPage', segment: 'cameralist', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cameralistip/cameralistip.module#CameralistipPageModule', name: 'CameralistipPage', segment: 'cameralistip', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/devices/devices.module#DevicesPageModule', name: 'DevicesPage', segment: 'devices', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/fire/fire.module#FirePageModule', name: 'FirePage', segment: 'fire', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/intrusion/intrusion.module#IntrusionPageModule', name: 'IntrusionPage', segment: 'intrusion', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/resetpassword/resetpassword.module#ResetpasswordPageModule', name: 'ResetpasswordPage', segment: 'resetpassword', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cameralistip/cameralistip.module#CameralistipPageModule', name: 'CameralistipPage', segment: 'cameralistip', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cameralist/cameralist.module#CameralistPageModule', name: 'CameralistPage', segment: 'cameralist', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_5__angular_fire__["a" /* AngularFireModule */].initializeApp(FIREBASE_CONFIG),
@@ -995,11 +905,11 @@ var AppModule = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DevicesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__camera_camera__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__intrusion_intrusion__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__fire_fire__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__camera_camera__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__intrusion_intrusion__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__fire_fire__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__access_access__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home__ = __webpack_require__(59);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1047,7 +957,7 @@ var DevicesPage = /** @class */ (function () {
     };
     DevicesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-devices',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/devices/devices.html"*/'<!--\n  Generated template for the DevicesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar hideBackButton>\n        <ion-buttons left>\n            <button ion-button (click)="BackButton()">\n                <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n            </button>\n        </ion-buttons>\n        </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">Choose Device</div>\n  <br>\n\n  <ion-list no-lines text-center>\n    <ion-item class = "texter">\n      CSS/Surveillence\n      <button ion-button outline item-end (click) = "goToCamera()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      Fire Detection\n      <button ion-button outline item-end (click) = "goToFire()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      Access Control\n      <button ion-button outline item-end (click) = "goToAccess()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      Intrusion Detection\n      <button ion-button outline item-end (click) = "goToDetection()">Add Device</button>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/devices/devices.html"*/,
+            selector: 'page-devices',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/devices/devices.html"*/'<!--\n  Generated template for the DevicesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar hideBackButton>\n        <ion-buttons left>\n            <button ion-button (click)="BackButton()">\n                <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n            </button>\n        </ion-buttons>\n        </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">Choose Device</div>\n  <br>\n\n  <ion-list no-lines text-center>\n    <ion-item class = "texter">\n      CSS/Surveillence\n      <button ion-button outline item-end (click) = "goToCamera()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      Fire Detection\n      <button ion-button outline item-end (click) = "goToFire()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      Access Control\n      <button ion-button outline item-end (click) = "goToAccess()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      Intrusion Detection\n      <button ion-button outline item-end (click) = "goToDetection()">Add Device</button>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/devices/devices.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], DevicesPage);
@@ -1067,7 +977,7 @@ var DevicesPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(325);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(333);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(63);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1093,7 +1003,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -1104,20 +1014,82 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 62:
+/***/ 59:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__devices_devices__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(63);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var HomePage = /** @class */ (function () {
+    function HomePage(fire, navCtrl, navParams, toast, app) {
+        this.fire = fire;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.toast = toast;
+        this.app = app;
+        //receiving data from other pages
+        this.recd = this.navParams.get('data');
+        console.log(this.recd);
+    }
+    HomePage.prototype.logout = function () {
+        this.toast.create({
+            message: 'Logout successful!',
+            duration: 3000,
+            position: 'top'
+        }).present();
+        this.app.getRootNav().setRoot(__WEBPACK_IMPORTED_MODULE_4__login_login__["a" /* LoginPage */]);
+    };
+    HomePage.prototype.add_device = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__devices_devices__["a" /* DevicesPage */]);
+    };
+    var _a, _b, _c, _d, _e;
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/home/home.html"*/'<ion-header>\n    <ion-navbar hideBackButton>\n      <ion-title text-center>\n        Home\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">WELCOME</div>\n<ng-container text-center>\n  <ion-card>\n      <img src="assets/imgs/placeholder.png" height=\'150\' width=\'80\'/>\n      <!-- <p>Name: {{recd}}</p> -->\n      <p>{{recd}}</p>\n   \n    </ion-card>\n    <ion-card *ngIf="recd">\n        <ion-img src="{{recd.image}}" style="width:1000px;height:100px;"></ion-img>\n     {{recd.name}}\n      </ion-card>\n    </ng-container>\n    <div  text-center>\n        <button ion-button (click) = "add_device()">Add Devices</button>\n      </div>\n    <ion-footer>\n         <div class="button-bottom" text-center>\n          <button ion-button small round outline (click) = "logout()">LogOut</button>\n        </div>\n    </ion-footer> \n  </ion-content>\n  '/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/home/home.html"*/
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */]) === "function" ? _a : Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" ? _b : Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" ? _c : Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]) === "function" ? _d : Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */]) === "function" ? _e : Object])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(283);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__signup_signup__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__signup_signup__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase_app__ = __webpack_require__(150);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_firebase_app__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__resetpassword_resetpassword__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__resetpassword_resetpassword__ = __webpack_require__(192);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1184,7 +1156,7 @@ var LoginPage = /** @class */ (function () {
                         position: 'top',
                         cssClass: 'texter'
                     }).present();
-                    _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__home_home__["a" /* HomePage */], { 'data': _this.user });
+                    _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__home_home__["a" /* HomePage */], { 'data': data });
                     _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__tabs_tabs__["a" /* TabsPage */]);
                 }
                 //logged in
@@ -1217,16 +1189,77 @@ var LoginPage = /** @class */ (function () {
     LoginPage.prototype.signupPush = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__signup_signup__["a" /* SignupPage */]);
     };
+    var _a, _b, _c, _d, _e;
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/goinfre/lmashiya/Elvey/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar hideBackButton>\n    <ion-title text-center>ElveyApp</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <h3 class="texter">"Providing Complete Peace of Mind"</h3>\n  <ion-list>\n\n\n    <ion-item>\n      <ion-label floating text-center>Email</ion-label>\n      <ion-input type="text" [(ngModel)] = "user.email" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating text-center>Password</ion-label>\n      <ion-input [type]="passwordType" [(ngModel)] = "user.password" ></ion-input>\n      <ion-icon name="eye" [color]="grey" (click)="togglePassword()" item-right=""></ion-icon>\n    </ion-item>\n\n\n    <div class="loginButton">\n    <ion-grid>\n      <ion-row>\n        <ion-col text-center>\n            <button ion-button round outline (click) = "login(user)">Login</button>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col text-center>\n            <button ion-button round outline (click) = "resetpass(user)">Reset Password</button>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n          <ion-col text-center class="button2">\n         <b class="texter">Not A Member?</b>\n         <br>\n          <button ion-button end round outline (click) = "signupPush()" >Signup</button>\n          </ion-col>\n      </ion-row>\n    </ion-grid>\n    </div>\n  </ion-list>\n  </ion-content>\n'/*ion-inline-end:"/goinfre/lmashiya/Elvey/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar hideBackButton>\n    <ion-title text-center>ElveyApp</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <h3 class="texter">"Providing Complete Peace of Mind"</h3>\n  <ion-list>\n\n\n    <ion-item>\n      <ion-label floating text-center>Email</ion-label>\n      <ion-input type="text" [(ngModel)] = "user.email" ></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating text-center>Password</ion-label>\n      <ion-input [type]="passwordType" [(ngModel)] = "user.password" ></ion-input>\n      <ion-icon name="eye" [color]="grey" (click)="togglePassword()" item-right=""></ion-icon>\n    </ion-item>\n\n\n    <div class="loginButton">\n    <ion-grid>\n      <ion-row>\n        <ion-col text-center>\n            <button ion-button round outline (click) = "login(user)">Login</button>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col text-center>\n            <button ion-button round outline (click) = "resetpass(user)">Reset Password</button>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n          <ion-col text-center class="button2">\n         <b class="texter">Not A Member?</b>\n         <br>\n          <button ion-button end round outline (click) = "signupPush()" >Signup</button>\n          </ion-col>\n      </ion-row>\n    </ion-grid>\n    </div>\n  </ion-list>\n  </ion-content>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" ? _a : Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" ? _b : Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" ? _c : Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__["a" /* AngularFireAuth */]) === "function" ? _d : Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]) === "function" ? _e : Object])
     ], LoginPage);
     return LoginPage;
 }());
 
 //# sourceMappingURL=login.js.map
+
+/***/ }),
+
+/***/ 86:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CameraPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__devices_devices__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__cameralist_cameralist__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cameralistip_cameralistip__ = __webpack_require__(193);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the CameraPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var CameraPage = /** @class */ (function () {
+    function CameraPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    CameraPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CameraPage');
+    };
+    CameraPage.prototype.BackButton = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__devices_devices__["a" /* DevicesPage */]);
+    };
+    CameraPage.prototype.goToCameraList = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__cameralist_cameralist__["a" /* CameralistPage */]);
+    };
+    CameraPage.prototype.goToCameraListIp = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cameralistip_cameralistip__["a" /* CameralistipPage */]);
+    };
+    CameraPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-camera',template:/*ion-inline-start:"/goinfre/ssekese/Desktop/Elvey/src/pages/camera/camera.html"*/'\n<ion-header>\n    <ion-navbar hideBackButton>\n       <ion-buttons left>\n           <button ion-button (click)="BackButton()">\n               <ion-icon class="customIcon" name="arrow-back"></ion-icon>\n           </button>\n       </ion-buttons>\n    </ion-navbar>\n   </ion-header>\n<ion-content padding text-center>\n  <img src="assets/imgs/elvey-extra-txt.png">\n  <div id="welcome_text" class="after_logo">CCTV/SURVEILLANCE</div>\n\n  <ion-list no-lines text-center>\n    <ion-item class = "texter">\n      HD Analogue Cameras\n      <button ion-button outline item-end (click) = "goToCameraList()">Add Device</button>\n    </ion-item>\n    <ion-item class = "texter">\n      IP Cameras\n      <button ion-button outline item-end (click) = "goToCameraListIp()">Add Device</button>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/goinfre/ssekese/Desktop/Elvey/src/pages/camera/camera.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    ], CameraPage);
+    return CameraPage;
+}());
+
+//# sourceMappingURL=camera.js.map
 
 /***/ })
 

@@ -13,11 +13,11 @@ import {App} from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  public recd = "";
+  public recd: any;
  
   constructor(private fire: AngularFireAuth,public navCtrl: NavController, public navParams: NavParams, public toast: ToastController, public app: App)
   {
-     //receiving data from LoginPage
+     //receiving data from other pages
      this.recd = this.navParams.get('data');
      console.log(this.recd);
   }

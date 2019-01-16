@@ -1,0 +1,74 @@
+{
+    "items": [
+        {
+            "type": "camera",
+            "image": "http://www.communica.co.za/Content/Catalog/Images/I0118996877.jpg",
+            "name": "Day/Night Mini Bullet with IR LED",
+            "params": {
+                "ip": "",
+                "username": "",
+                "password": ""
+            }
+        },
+        {
+            "type": "camera",
+            "image": "assets/imgs/starlight_resized.jpg",
+            "name": "2MP 25x Starlight IR PTZ HDCVI",
+            "params": {
+                "ip": "",
+                "username": "",
+                "password": ""
+            }
+        },
+        {
+            "type": "camera",
+            "image": "assets/imgs/vari_focal.png",
+            "name": "2MP Vari-Focal HDCVI IR Vandal Dome",
+            "params": {
+                "ip": "",
+                "username": "",
+                "password": ""
+            }
+        },
+        {
+            "type": "camera",
+            "image": "assets/imgs/plastic_indoor.jpg",
+            "name": "1MP Plastic Indoor IR Eyeball",
+            "params": {
+                "ip": "",
+                "username": "",
+                "password": ""
+            }
+        },
+        {
+            "type": "camera",
+            "image": "assets/imgs/metal_ir.jpg",
+            "name": "1MP Metal IR Eyeball",
+            "params": {
+                "ip": "",
+                "username": "",
+                "password": ""
+            }
+        },
+        {
+            "type": "camera",
+            "image": "assets/imgs/eyeball.jpg",
+            "name": "1MP IR Eyeball Camera With Audio",
+            "params": {
+                "ip": "",
+                "username": "",
+                "password": ""
+            }
+        },
+        {
+            "type": "camera",
+            "image": "assets/imgs/1MP Vari-Focal IR Eyeball Camera.jpg",
+            "name": "1MP Vari-Focal IR Eyeball",
+            "params": {
+                "ip": "",
+                "username": "",
+                "password": ""
+            }
+        }
+    ]
+}

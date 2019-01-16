@@ -32,6 +32,11 @@ import { Camera } from '@ionic-native/camera'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SetupPage } from '../pages/setup/setup';
+import { DatafinderProvider } from '../providers/datafinder';
+
+import {Http, HttpModule} from '@angular/http';
+import { SharedService } from '../models/sharedservice';
 
 const FIREBASE_CONFIG = {
   apiKey: "AIzaSyBqYOyccGOFdplohm76JuRGpEkMmB5PZVI",
@@ -56,15 +61,17 @@ const FIREBASE_CONFIG = {
     CameraPage,
     AccessPage,
     FirePage,
-      ResetpasswordPage,
-      CameralistPage,
-      CameralistipPage,
+    ResetpasswordPage,
+    CameralistPage,
+    CameralistipPage,
+    SetupPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -83,6 +90,7 @@ const FIREBASE_CONFIG = {
     ResetpasswordPage,
     CameralistPage,
     CameralistipPage,
+    SetupPage
   ],
   providers: [
     StatusBar,
@@ -94,7 +102,9 @@ const FIREBASE_CONFIG = {
     Transfer,
     Camera,
     FilePath,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DatafinderProvider,
+    SharedService
   ]
 })
 export class AppModule {}

@@ -3,9 +3,10 @@
       <ion-title text-center>
         Home
       </ion-title>
-        <div class="button-bottom" text-center>
+        <div class="button-bottom">
             <!--<button ion-button small round outline (click) = "logout()">LogOut</button>-->
-            <ion-icon ios="ios-log-out" md="md-log-out" (click) = "logout()" >LogOut</ion-icon>
+            <!-- <ion-icon ios="ios-log-out" md="md-log-out" (click) = "logout()" >LogOut</ion-icon> -->
+            <ion-icon name="log-out" (click) = "logout()" style="margin-right: 20px;"></ion-icon>
         </div>
     </ion-navbar>
   </ion-header>
@@ -31,17 +32,23 @@
     <ion-list *ngFor="let item of deviceList" no-lines text-center >
         <ion-item class = "texter">
             <img src="{{item.image}}" style="width:50px;height:50px;">
+            <ion-icon name="construct" style="margin-top: 10px;" (click)="configureDevice(item)"></ion-icon>
+            <ion-icon name="play" style="margin-top: 10px; margin-right: 10px;" (click)="streamFromDevice()"></ion-icon>
             <p>{{ item.name }}</p>
             <!-- <button ion-button outline item-end (click) = "redirectToSetup(item)">Add Device</button> -->
         </ion-item>
     </ion-list>
-    <p>
 
-
-      
-    </p>
+    <div *ngIf="deviceList.length == 0;">
+        <p text-center>
+            <b> Hello, <br>
+            Welcome to Elvey Central Control Panel. <br>
+            Get started by connecting your system.
+        </b>
+        </p>
+    </div>
     <div text-center style="margin-top: 50px;">
-        <button ion-button (click) = "add_device()">Add Devices</button>
+        <button ion-button round outline (click) = "add_device()">Add System</button>
     </div>
   </ion-content>
   

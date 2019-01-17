@@ -37,6 +37,7 @@ import { DatafinderProvider } from '../providers/datafinder';
 
 import {Http, HttpModule} from '@angular/http';
 import { SharedService } from '../models/sharedservice';
+import { StreamPage } from '../pages/stream/stream';
 
 const FIREBASE_CONFIG = {
   apiKey: "AIzaSyBqYOyccGOFdplohm76JuRGpEkMmB5PZVI",
@@ -64,7 +65,8 @@ const FIREBASE_CONFIG = {
     ResetpasswordPage,
     CameralistPage,
     CameralistipPage,
-    SetupPage
+    SetupPage,
+    StreamPage
   ],
   imports: [
     BrowserModule,
@@ -90,7 +92,9 @@ const FIREBASE_CONFIG = {
     ResetpasswordPage,
     CameralistPage,
     CameralistipPage,
-    SetupPage
+    SetupPage,
+    StreamPage
+    
   ],
   providers: [
     StatusBar,

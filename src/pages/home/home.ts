@@ -6,6 +6,8 @@ import { ToastController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import {App} from 'ionic-angular';
 import { SharedService } from '../../models/sharedservice';
+import { SetupPage } from '../setup/setup';
+import { StreamPage } from '../stream/stream';
 
 @Component({
   selector: 'page-home',
@@ -29,19 +31,19 @@ export class HomePage {
   }
 
   logout(){
-      this.toast.create({
-        message: 'Logout successful!',
-        duration: 3000,
-        position: 'top'
-      }).present();
       this.app.getRootNav().setRoot(LoginPage);
   }
 
   add_device(){
     this.navCtrl.push(DevicesPage);
   }
-  Feed()
-  {
-    
+
+  configureDevice(item: any) {
+    this.navCtrl.push(SetupPage, {'data': item});
+    console.log("Configure");
+  }
+
+  streamFromDevice(){
+    this.navCtrl.push(StreamPage);
   }
 }

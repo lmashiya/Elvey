@@ -16,41 +16,41 @@
 <ion-content padding text-center>
   <img src="assets/imgs/elvey-extra-txt.png">
   <h3 class="texter">"Providing Complete Peace of Mind"</h3>
-  <ion-list>
-
-
-    <ion-item class="texter">
-      <ion-label floating text-center>Email</ion-label>
-      <ion-input text-center  type="text" [(ngModel)] = "user.email" ></ion-input>
-    </ion-item>
-
-    <ion-item class="texter">
-      <ion-label floating text-center>Password</ion-label>
-      <ion-input text-center [type]="passwordType" [(ngModel)] = "user.password" ></ion-input>
-      <ion-icon name="eye" [color]="grey" (click)="togglePassword()" item-right=""></ion-icon>
-    </ion-item>
-
-
-    <div class="loginButton">
-    <ion-grid>
+  <div class="login-box">
+    <form (ngSubmit)="login()" #registerForm="ngForm">
       <ion-row>
-        <ion-col text-center>
-            <button ion-button round outline (click) = "login(user)">Login</button>
+        <ion-col>
+          <ion-list inset>
+            
+            <ion-item>
+              <ion-input text-center type="text" placeholder="Email" name="email" [(ngModel)] = "user.email" required></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-input text-center type="password" placeholder="Password" name="password" [(ngModel)] = "user.password" required></ion-input>
+            </ion-item>
+            
+          </ion-list>
         </ion-col>
       </ion-row>
-      <ion-row>
-        <ion-col text-center>
-            <button ion-button round outline (click) = "resetpass(user)">Reset Password</button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-          <ion-col text-center class="button2">
-         <b class="texter">Not A Member?</b>
-         <br>
-          <button ion-button end round outline (click) = "signupPush()" >Signup</button>
-          </ion-col>
-      </ion-row>
-    </ion-grid>
-    </div>
-  </ion-list>
+        <ion-grid>
+            <ion-row>
+                <ion-col text-center>
+                    <button ion-button round outline (click) = "login(user)">Login</button>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col text-center>
+                      <button ion-button round outline (click) = "resetpass(user)">Reset Password</button>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col text-center>
+                        <button ion-button round outline class="register-btn" (click) = "signupPush()" >Create New Account</button>
+                    </ion-col>
+                  </ion-row>
+        </ion-grid>
+    </form>
+  </div>
+
   </ion-content>

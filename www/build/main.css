@@ -42446,6 +42446,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.activeHighLight {
+  background-color: #f4f4f4;
+}
+
 page-about .texter {
   color: #00599c;
 }
@@ -42575,4 +42579,8 @@ page-login ion-grid {
 
 page-signup .signupButton {
   margin-top: 9px;
+}
+
+page-signup .texter {
+  color: #00599c;
 }

@@ -58,12 +58,6 @@ export class LoginPage {
                           }).present();
                       }
                       else {
-                        this.toast.create({
-                            message: 'Login successful!',
-                            duration: 3000,
-                            position: 'top',
-                            cssClass: 'texter'
-                          }).present();
                           this.navCtrl.push(HomePage, {'data': data});
                           this.navCtrl.setRoot(TabsPage);
                       }

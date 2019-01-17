@@ -32,7 +32,6 @@ export class SetupPage {
 
   addToDeviceList() {
     this.sharedService.devices.push(this.item);
-    console.log(this.sharedService.devices.length);
     this.navCtrl.push(HomePage, {'deviceList': this.sharedService.devices});
   }
 }
